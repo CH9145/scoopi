@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+  max-width: 1140px;
+}
+
+.float-left {
+  float: left;
+}
+
+.index-line {
+  position: absolute;
+  z-index: 1;
+}
+
+.index-bg {
+  position: absolute;
+  z-index: 0;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
