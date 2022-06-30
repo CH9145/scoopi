@@ -1,5 +1,6 @@
 $primary-color: #4A3100;
 $pink: #EC778F;
+$yellow: #F4C748;
 
 *{
     margin: 0;
@@ -20,6 +21,7 @@ a {
 
 body {
     margin: 0;
+    background-image: url(/public/images/white_wall.png);
 }
 
 .w-20 {
@@ -30,6 +32,7 @@ body {
     width: 80%;
     justify-content: right;
 }
+
 
 .row {
     display: flex;
@@ -46,7 +49,9 @@ body {
     max-width: 1140px;
 }
 
-
+.text-center{
+    text-align: center;
+}
 
 @for $i from 1 through 12 {
     .col-#{$i} {
@@ -113,11 +118,9 @@ header>.row{
     position: absolute;
     top: 30%;
     right: 20%;
-    width: 15%;
+    width: 20%;
     z-index: 10;
 }
-
-
 
 .index-logo{
     position: absolute;
@@ -128,13 +131,43 @@ header>.row{
 }
 
 nav{
-    display: flex;
-    flex-wrap: wrap;
+    display: block
 }
 
+.nav-home>ul{
+    display: flex;
+    flex-wrap: wrap;
+    // width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    padding: 0px 40px;
+    z-index: 200;
+    background-color: rgba($primary-color,0.8);
+    border-radius: 8px;
+    display: none;
+}
+
+.nav-home>ul>li>a{
+    margin: 0px 20px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+.nav-home>ul>li>a:hover{
+    color: $yellow;
+    opacity: 1;
+    border-bottom:2px solid $yellow;
+}
 
 .icon-menu{
     display: block;
+    position: fixed;
+    z-index: 201;
+    top: 30px;
+    right: 30px;
     background-color: #4A3100;
     color: white;
     width: 50px;
@@ -165,8 +198,83 @@ h2{
     margin-bottom: 10px;
 }
 
+h3.home{
+    border-bottom: 2px solid $yellow;
+    padding-left: 10px;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.home-content{
+    padding: 50px 0px;
+    align-items: center;
+}
+
+
 @media(min-width:768px){
     .order-md-1{
         order: -1;
+        text-align: right;
     }
+}
+
+.map{
+    margin-bottom: 10px;
+}
+
+.map-icons{
+    // background-color: #f5dbe0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.map-icon{
+    width: 30%;
+    margin: 30px;
+}
+
+
+
+.home-time{
+    // display: block;
+    width: 200px;
+}
+
+// FOOTER
+footer{
+    background-color: #4A3100;
+    height: 150px;
+}
+
+footer>div>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 20px;
+}
+
+.footer-text>p{
+    color: white;
+    font-size: 14px;
+}
+
+.footer-logo{
+    height: 80px;
+}
+
+.social-icon>a{
+    // background-color: #EC778F;
+    display: inline-block;
+    // float: right;
+    width: 10%;
+}
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
 }

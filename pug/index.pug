@@ -9,27 +9,26 @@ head
 body
     header
         .row
-            img.img-fluid.index-line-left(src="/public/images/home-line-left.png", alt="Scoopi首頁") 
-            img.img-fluid.index-line-right(src="/public/images/home-line-right.png", alt="")
-            img.img-fluid.index-bg(src="/public/images/home-Vector01.png", alt="Scoopi首頁")
-            img.img-fluid.index-text(src="/public/images/home-text.png", alt="")
+            img.img-fluid.index-line-left(src="/public/images/home-line-left.png", alt="Scoopi首頁裝飾") 
+            img.img-fluid.index-line-right(src="/public/images/home-line-right.png", alt="Scoopi首頁裝飾")
+            img.img-fluid.index-bg(src="/public/images/home-Vector01.png", alt="Scoopi首頁背景")
+            img.img-fluid.index-text(src="/public/images/home-text.png", alt="捲起一杓微風。送入口中，凝結夏日。")
             img.index-logo(src="/public/images/scoopi-logo-chinese.png", alt="Scoopi的LOGO")
-
-
         a#btn-nav-toggle.icon-menu(href="javascript:;") =
+        nav.nav-home
+            ul
+                li 
+                    a(href="#")  關於我們
+                li 
+                    a(href="#") 全部產品
+                li 
+                    a(href="#") 最新消息
+                li 
+                    a(href="#") 聯絡|宅配
+                li 
+                    a(href="#") 我的會員
+        
             //- i.fa-solid.fa-bars
-        nav
-            ul 
-                li 
-                    a 關於我們
-                li 
-                    a 全部產品
-                li 
-                    a 最新消息
-                li 
-                    a 聯絡|宅配
-                li 
-                    a 我的會員
     #banner
         img.img-fluid(src="/public/images/home-banner-strawberry01.jpg", alt="限時草莓優格冰淇淋")
     .container  
@@ -37,34 +36,60 @@ body
         img.title-line(src="public/images/home-line-title.png", alt="分隔線")
         .row
             .col-md-6
-                img(src="public/images/home-shop.jpg", alt="店面")
+                img.img-fluid.sm-hidden(src="public/images/home-shop.jpg", alt="店面")
             .col-md-6
                 .row
                     .col-6.col-md-6
-                        img(src="public/images/home-round01.png", alt="嚴選原料")
-                    .col-6.col-md-6
-                        h3 嚴選原料
+                        img.img-fluid(src="public/images/home-round01.png", alt="嚴選原料")
+                    .col-6.col-md-6.home-content
+                        h3.home 嚴選原料
                         p 使用高規格原料與最新鮮的當季原型食材
-                .row 
+                .row
                     .col-6.col-md-6
-                        img(src="public/images/home-round02.png", alt="美味")
-                    .col-6.col-md-6.order-md-1
-                        h3 美味
+                        img.img-fluid(src="public/images/home-round02.png", alt="美味")
+                    .col-6.col-md-6.order-md-1.home-content
+                        h3.home 美味
                         p 經過無數次實驗、研發
                         p 每一口都是黃金比例
-                .row 
+                .row
                     .col-6.col-md-6
-                        img(src="public/images/home-round03.png", alt="安心")
-                    .col-6.col-md-6
-                        h3 安心
+                        img.img-fluid(src="public/images/home-round03.png", alt="安心")
+                    .col-6.col-md-6.home-content
+                        h3.home 安心
                         p 製作過程乾淨、衛生 
                         p 大人小孩都吃得安心快樂
         h2 找到我們
         img.title-line(src="public/images/home-line-title.png", alt="分隔線")
     .map
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.374203054327!2d120.67474811421854!3d24.123493280339574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d02fbdf00cf%3A0xca558b13873d5a59!2zNDAy5Y-w5Lit5biC5Y2X5Y2A6IiI5aSn6LevMTQ16Jmf!5e0!3m2!1szh-TW!2stw!4v1656472615633!5m2!1szh-TW!2stw" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.374203054327!2d120.67474811421854!3d24.123493280339574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d02fbdf00cf%3A0xca558b13873d5a59!2zNDAy5Y-w5Lit5biC5Y2X5Y2A6IiI5aSn6LevMTQ16Jmf!5e0!3m2!1szh-TW!2stw!4v1656472615633!5m2!1szh-TW!2stw" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        .container
+            .row.map-icons
+                a(href="#") 
+                    img.img-fluid.map-icon(src="/public/images/car-alt.png", alt="開車導航")
+                a(href="#") 
+                    img.img-fluid.map-icon(src="/public/images/biking.png", alt="腳踏車導航")
+                a(href="#") 
+                    img.img-fluid.map-icon(src="/public/images/walking.png", alt="走路導航")
+            .text-center
+                h5 台中市南區興大路145號
+                h5 (04) 2222-3456
+            img.home-time.img-fluid(src="/public/images/home-time.png", alt="營業時間")
     footer 
         .container 
             .row
-            p FOOTER HERE
+                .footer-text.text-left
+                    p (04) 2222-3456
+                    p 台中市南區興大路145號
+                .footer-text.text-center
+                    img.img-fluid.footer-logo(src="public/images/scoopi-logo-white.png", alt="")
+                    p Copyright © 2022 Scoopi
+                .footer-text.text-right
+                    .social-icon
+                        a(href="#")
+                            img.img-fluid(src="/public/images/footer-instagram.png", alt="官方Instagram")
+                        a(href="#")
+                            img.img-fluid(src="/public/images/footer-facebook.png", alt="官方Facebook")
+                        a(href="#")
+                            img.img-fluid(src="/public/images/footer-line.png", alt="官方Line")
+
+                    p service@scoopi.com.tw
