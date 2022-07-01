@@ -1,0 +1,68 @@
+doctype html
+html 
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title Scoopi
+        link(rel='stylesheet', href='public/css/styles.css')
+    body
+        header.inner-page
+            h1.smheader 
+                a(href="index.html") Scoopi
+                    img(src="public/images/scoopi-icon-yellow.png", alt="")
+                a(href="index.html") Gelato Shop
+            .container
+                a(href="index.html").header-logo 
+                    img(src="public/images/scoopi-logo-chinese.png", alt="Scoopi的LOGO")
+                a#btn-nav-switch.icon-menu.icon-menu-inner-page(href="javascript:;")
+                    .icon-menu-inner
+                        img(src="public/images/icon-menu.svg", alt="icon-menu")
+                nav#primary-navigation.nav-inner-page 
+                    ul 
+                        li 
+                            a(href="") 關於我們
+                        li 
+                            a(href="product.html") 全部產品
+                        li 
+                            a(href="#") 最新消息
+                        li 
+                            a(href="#") 聯絡|宅配
+                        li 
+                            a(href="#") 我的會員
+        .header-height
+        .container.row
+            .breadcrumb
+                a(href='index.html') 首頁
+                span ＞
+                a.breadcrumb-active(href='product.html') 全部產品
+            aside.col-12.col-md-3.col-lg-3
+                .sidebar
+                    ul
+                        li
+                            a.bt-primary(href='') 所有口味
+                    ul
+                        li
+                            a.bt-primary(href='') 最新口味
+                    ul
+                        li
+                            a.bt-primary(href='') 季節限定
+                    ul
+                        li
+                            a.bt-primary(href='') 經典搭配
+            main.col-12.col-md-9.col-lg-9
+                .product-flavor
+                    h2.text-left 所有口味
+                    .row
+                        .col-12.col-md-6.col-lg-3
+                            a.img-wrap(href='')
+                                .img-overlay
+                                    img.img-fluid(src='https://www.fillmurray.com/500/500' alt='')
+                                    span.icon-new NEW
+                            p.title.text-center
+                                a(href='') 草莓優格
+                            p.description.text-center 說明
+
+
+        script(src='https://code.jquery.com/jquery-3.6.0.min.js', integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', crossorigin='anonymous')
+        script(src="public/js/script.js")
