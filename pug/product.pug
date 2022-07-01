@@ -4,7 +4,7 @@ html
         meta(charset='UTF-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
-        title Scoopi
+        title 口味集錦
         link(rel='stylesheet', href='public/css/styles.css')
     body
         header.inner-page
@@ -21,7 +21,7 @@ html
                 nav#primary-navigation.nav-inner-page 
                     ul 
                         li 
-                            a(href="") 關於我們
+                            a(href="about.html") 關於我們
                         li 
                             a(href="product.html") 全部產品
                         li 
@@ -33,23 +33,23 @@ html
         .header-height
         .container.row
             .breadcrumb
-                a(href='index.html') 首頁
+                a.breadcrumb-first(href='index.html') 首頁
                 span ＞
-                a.breadcrumb-active(href='product.html') 全部產品
+                a.breadcrumb.active(href='product.html') 全部產品
             aside.col-12.col-md-3.col-lg-3
                 .sidebar
                     ul
                         li
-                            a.bt-primary(href='') 所有口味
+                            a.btn-primary(href='#all-flavor') 所有口味
                     ul
                         li
-                            a.bt-primary(href='') 最新口味
+                            a.btn-primary(href='#newest-flavor') 最新口味
                     ul
                         li
-                            a.bt-primary(href='') 季節限定
+                            a.btn-primary(href='#seasonal') 季節限定
                     ul
                         li
-                            a.bt-primary(href='') 經典搭配
+                            a.btn-primary(href='#classic') 經典搭配
             main.col-12.col-md-9.col-lg-9
                 .product-flavor
                     h2.text-left 所有口味
