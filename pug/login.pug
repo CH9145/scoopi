@@ -1,0 +1,57 @@
+doctype html
+html 
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title 聯絡我們
+        link(rel='stylesheet', href='public/css/styles.css')
+    body
+        header.inner-page
+            h1.smheader 
+                a(href="index.html") Scoopi
+                    img(src="public/images/scoopi-icon-yellow.png", alt="")
+                a(href="index.html") Gelato Shop
+            .container
+                a(href="index.html").header-logo 
+                    img(src="public/images/scoopi-logo-chinese.png", alt="Scoopi的LOGO")
+                a#btn-nav-switch.icon-menu.icon-menu-inner-page(href="javascript:;")
+                    .icon-menu-inner
+                        img(src="public/images/icon-menu.svg", alt="icon-menu")
+                nav#primary-navigation.nav-inner-page 
+                    ul 
+                        li 
+                            a(href="") 關於我們
+                        li 
+                            a(href="product.html") 全部產品
+                        li 
+                            a(href="#") 最新消息
+                        li 
+                            a(href="#") 聯絡|宅配
+                        li 
+                            a(href="#") 我的會員
+        .container
+            .row 
+                .col-12.col-md-6.offset-md-3
+                    form.form(action="javascript:;")
+                        h2 我的會員
+                        .input-group
+                            label(for="account") 帳號
+                            input(type="text" id="account") 
+                        .input-group
+                            label(for="account") 密碼
+                            input(type="text" id="account") 
+                        .input-group 
+                            .w-48 
+                                input(type="checkbox", name="")
+                                |記住帳號
+                            .w-48 
+                                a(href="")
+                                    img(src="public/images/google.png")
+                                a(href="")
+                                    img(src="public/images/facebook.png")
+                                a(href="")
+                                    img(src="public/images/line.png")
+                        .input-group.flex-space-between
+                            input.btn-secondary.w-48(type="submit" value="註冊")
+                            input.btn-primary.w-48(type="submit" value="登入")

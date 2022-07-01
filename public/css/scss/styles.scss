@@ -2,6 +2,18 @@ $primary-color: #4A3100;
 $pink: #EC778F;
 $yellow: #F4C748;
 
+.btn-primary{
+    background-color: #EC778F;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary{
+    background-color: #F4C748;
+    border: none;
+    cursor: pointer;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -65,6 +77,51 @@ body {
         margin: 10px 20px 10px 20px;
     }
 }
+
+//==========================================左邊界位移
+// @media(min-width:768px) {
+//     @for $i from 1 through 12 {
+//         .offset-md-#{$1} {
+//             --ml-num: calc( 12 / #{$1});
+//             margin-left: calc(100% / var(--ml-num));
+//         }
+//     }
+// }
+
+.form{
+    // background-color: pink;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+.input-group{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+label{
+    display: block;
+    width: 20%;
+}
+input{
+    border: none;
+    border-radius: 4px;
+    border: 1px solid gray;
+    line-height: 30px;
+}
+
+input[type="text"] {
+    width: 80%
+}
+
+.flex-space-between{
+    justify-content: space-between;
+}
+.w-48{
+    width: 48%;
+}
+
+//=========================================
+
 
 // column-預設手機排版 END
 
@@ -599,37 +656,53 @@ footer>.container>.row>div>.copyright {
 
 //FOOTER MD LG 
 @media(min-width:768px) {
-
     .footer-logo {
+        display: block;
         width: 60%;
-        margin-bottom: 2%;
+        padding: 0% 20%;
+        margin-bottom: 1%;
     }
 
-    .social-icon {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: end;
-        border-bottom: none;
-    }
-
-    .social-icon>a {
-        width: 11%;
-        margin-left: 3%;
-    }
-
-    footer>.container>.row>div>.copyright {
-        font-size: 12px;
-        color: #fafafadf;
-        text-align: center;
-    }
+    
 
     footer>.container>.row>div>p {
         color: white;
         font-size: 14px;
         line-height: 20px;
-        text-align: left;
+        letter-spacing: 1px;
     }
 
+    footer>.container>.row>div>p.email {
+        line-height: 14px;
+        letter-spacing: 1px;
+    }
+
+    .social-icon {
+        justify-content: end;
+        border-bottom: none;
+    }
+
+    .social-icon>a {
+        display: block;
+        width: 11%;
+        margin-left: 3%;
+    }
+
+    footer>.container>.row>div>.copyright {
+        font-size: 8px;
+        color: #fafafadf;
+        text-align: center;
+    }
+
+    // footer>.container>.row>div>p {
+    //     color: white;
+    //     font-size: 14px;
+    //     line-height: 20px;
+    // }
+
+    footer>.container>.row>.footer-md-left>p {
+        text-align: left;
+    }
     footer>.container>.row>.footer-md-right>p {
         text-align: right;
     }
@@ -643,12 +716,13 @@ footer>.container>.row>div>.copyright {
     }
 
     .footer-phone-add-md {
-        display: block
+        display: block;
     }
 
     .footer-phone-add-sm {
         display: none;
     }
+
 
 }
 
@@ -656,9 +730,7 @@ footer>.container>.row>div>.copyright {
 // ////////FOOTER MD end//////////////
 //////////////////////////////////////
 
-.footer-md-left {
-    text-align: left;
-}
+
 
 .footer-md-center {
     text-align: center;
