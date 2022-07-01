@@ -4,37 +4,38 @@ html
         meta(charset='UTF-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
-        title 聯絡我們
+        title 我的會員
         link(rel='stylesheet', href='public/css/styles.css')
     body
         header.inner-page
             h1.smheader 
-                a(href="index.html") Scoopi
-                    img(src="public/images/scoopi-icon-yellow.png", alt="")
-                a(href="index.html") Gelato Shop
+                a(href="index.html")
+                    img(src="public/images/scoopi-icon-yellow.png", alt="") 
+                    span Scoopi Gelato Shop
             .container
                 a(href="index.html").header-logo 
-                    img(src="public/images/scoopi-logo-chinese.png", alt="Scoopi的LOGO")
+                    img(src="public/images/scoopi-logo-default.png", alt="Scoopi的LOGO")
                 a#btn-nav-switch.icon-menu.icon-menu-inner-page(href="javascript:;")
                     .icon-menu-inner
                         img(src="public/images/icon-menu.svg", alt="icon-menu")
                 nav#primary-navigation.nav-inner-page 
-                    ul 
+                    ul
                         li 
-                            a(href="") 關於我們
+                            a(href="about.html")  關於我們
                         li 
                             a(href="product.html") 全部產品
                         li 
-                            a(href="#") 最新消息
+                            a(href="news.html") 最新消息
                         li 
-                            a(href="#") 聯絡|宅配
+                            a(href="contact.html") 聯絡|宅配
                         li 
-                            a(href="#") 我的會員
+                            a(href="login.html") 我的會員
         .container
             .row 
-                .col-12.col-md-6.offset-md-3
+                .col-12.col-md-6-center-login
                     form.form(action="javascript:;")
                         h2 我的會員
+                        img.title-line-innerpage(src="public/images/title-line.svg", alt="")
                         .input-group
                             label(for="account") 帳號
                             input(type="text" id="account") 
@@ -42,16 +43,47 @@ html
                             label(for="account") 密碼
                             input(type="text" id="account") 
                         .input-group 
-                            .w-48 
+                            .w-50
                                 input(type="checkbox", name="")
                                 |記住帳號
-                            .w-48 
-                                a(href="")
-                                    img(src="public/images/google.png")
-                                a(href="")
-                                    img(src="public/images/facebook.png")
-                                a(href="")
-                                    img(src="public/images/line.png")
+                            .w-50.forget-id
+                                p 忘記帳號或密碼?
                         .input-group.flex-space-between
                             input.btn-secondary.w-48(type="submit" value="註冊")
                             input.btn-primary.w-48(type="submit" value="登入")
+                        .input-group.snslogin
+                            p 社群登入
+                        .input-group.flex-space-between.login-icons
+                            a(href="#")
+                                .btn-snslogin.w-30 
+                                    img.login-brand(src="public/images/login-google.svg", )
+                            a(href="#")
+                                .btn-snslogin.w-30 
+                                    img.login-brand(src="public/images/login-facebook.svg")
+                            a(href="#")
+                                .btn-snslogin.w-30
+                                    img.login-brand(src="public/images/login-line.png")                        
+        footer 
+            .container 
+                .row
+                    .col-md-4.col-12.footer-md-left.footer-phone-add-md
+                        p (04) 2222-3456
+                        p 台中市南區興大路145號
+                    .col-md-4.col-12.footer-md-center
+                        img.img-fluid.footer-logo(src="public/images/scoopi-logo-white.png", alt="")
+                        p.copyright.copyright-md.footer-order-sm-1 Copyright © 2022 Scoopi
+                    .col-md-4.col-12.footer-md-right
+                        .social-icon
+                            a(href="#")
+                                img.img-fluid(src="public/images/footer-instagram.png", alt="官方Instagram")
+                            a(href="#")
+                                img.img-fluid(src="public/images/footer-facebook.png", alt="官方Facebook")
+                            a(href="#")
+                                img.img-fluid(src="public/images/footer-line.png", alt="官方Line")
+                        p.email service@scoopi.com.tw
+                        p.footer-phone-add-sm (04) 2222-3456
+                        p.footer-phone-add-sm 台中市南區興大路145號
+                        p.copyright.copyright-sm.footer-order-sm-1 Copyright © 2022 Scoopi
+
+        script(src='https://code.jquery.com/jquery-3.6.0.min.js', integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', crossorigin='anonymous')
+        script(src="public/js/script.js")

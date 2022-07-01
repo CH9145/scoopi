@@ -9,27 +9,27 @@ html
     body
         header.inner-page
             h1.smheader 
-                a(href="index.html") Scoopi
-                    img(src="public/images/scoopi-icon-yellow.png", alt="")
-                a(href="index.html") Gelato Shop
+                a(href="index.html")
+                    img(src="public/images/scoopi-icon-yellow.png", alt="") 
+                    span Scoopi Gelato Shop
             .container
                 a(href="index.html").header-logo 
-                    img(src="public/images/scoopi-logo-chinese.png", alt="Scoopi的LOGO")
+                    img(src="public/images/scoopi-logo-default.png", alt="Scoopi的LOGO")
                 a#btn-nav-switch.icon-menu.icon-menu-inner-page(href="javascript:;")
                     .icon-menu-inner
                         img(src="public/images/icon-menu.svg", alt="icon-menu")
                 nav#primary-navigation.nav-inner-page 
-                    ul 
+                    ul
                         li 
-                            a(href="about.html") 關於我們
+                            a(href="about.html")  關於我們
                         li 
                             a(href="product.html") 全部產品
                         li 
-                            a(href="#") 最新消息
+                            a(href="news.html") 最新消息
                         li 
-                            a(href="#") 聯絡|宅配
+                            a(href="contact.html") 聯絡|宅配
                         li 
-                            a(href="#") 我的會員
+                            a(href="login.html") 我的會員
         .header-height
         .container.row
             .breadcrumb
@@ -63,6 +63,27 @@ html
                                 a(href='') 草莓優格
                             p.description.text-center 說明
 
+        footer 
+            .container 
+                .row
+                    .col-md-4.col-12.footer-md-left.footer-phone-add-md
+                        p (04) 2222-3456
+                        p 台中市南區興大路145號
+                    .col-md-4.col-12.footer-md-center
+                        img.img-fluid.footer-logo(src="public/images/scoopi-logo-white.png", alt="")
+                        p.copyright.copyright-md.footer-order-sm-1 Copyright © 2022 Scoopi
+                    .col-md-4.col-12.footer-md-right
+                        .social-icon
+                            a(href="#")
+                                img.img-fluid(src="public/images/footer-instagram.png", alt="官方Instagram")
+                            a(href="#")
+                                img.img-fluid(src="public/images/footer-facebook.png", alt="官方Facebook")
+                            a(href="#")
+                                img.img-fluid(src="public/images/footer-line.png", alt="官方Line")
+                        p.email service@scoopi.com.tw
+                        p.footer-phone-add-sm (04) 2222-3456
+                        p.footer-phone-add-sm 台中市南區興大路145號
+                        p.copyright.copyright-sm.footer-order-sm-1 Copyright © 2022 Scoopi
 
         script(src='https://code.jquery.com/jquery-3.6.0.min.js', integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', crossorigin='anonymous')
         script(src="public/js/script.js")

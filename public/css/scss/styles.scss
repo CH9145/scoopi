@@ -46,6 +46,17 @@ a {
     text-align: center;
 }
 
+.btn-white{
+    display: block;
+    background-color: #fafafa;
+    border: 0.3px solid $primary-color;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    padding: 5px 0px;
+    text-align: center;
+}
+
 img {
     vertical-align: top;
 }
@@ -84,37 +95,60 @@ body {
     text-align: center;
 }
 
-@for $i from 1 through 12 {
-    .col-#{$i} {
-        --num: calc(12 / #{$i});
-        width: calc(100% / var(--num) - 40px);
-        margin: 10px 20px 10px 20px;
-    }
-}
-
-//==========================================左邊界位移
-// @media(min-width:768px) {
-//     @for $i from 1 through 12 {
-//         .offset-md-#{$1} {
-//             --ml-num: calc( 12 / #{$1});
-//             margin-left: calc(100% / var(--ml-num));
-//         }
-//     }
-// }
-
+//====================================
+//=============FORM===================
+//===========input相關=================
+//====================================
 .form{
     // background-color: pink;
     margin-bottom: 80px;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 .input-group{
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+.input-group>p{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: x-small;
+    color: rgb(125, 125, 125);
+    border-top: 1px solid rgb(206, 206, 206);
+    letter-spacing: 1px;
+    padding-top: 5px;
+}
+
+
+.input-group h3{
+    font-size: x-small;
+    color: rgb(125, 125, 125);
+}
+
+input.btn-primary{
+    letter-spacing: 5px;
+}
+
+input.btn-secondary{
+    letter-spacing: 5px;
+}
+
+.forget-id>p{
+    font-size: 15px;
+    text-align:right;
+    cursor: pointer;
+    color: #544a36;
+}
+
+.forget-id>p:hover{
+    color: black;
 }
 
 label{
     display: block;
     width: 20%;
+    font-size: 20px;
+    letter-spacing: 0.3em;
 }
 input{
     border: none;
@@ -127,6 +161,40 @@ input[type="text"] {
     width: 80%
 }
 
+input[type="checkbox"]{
+    margin-right: 6px;
+}
+
+input[type="submit"]{
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+input[type="radio"]{
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+input.radio-first{
+    margin-left: 0px;
+}
+
+.input-group>span{
+    color: chocolate;
+    cursor: pointer;
+}
+
+.input-group>span:hover{
+    border-bottom: 1px solid chocolate;
+}
+
+// .input-contact>label{
+//     letter-spacing: 0px;
+// }
+
 .flex-space-between{
     justify-content: space-between;
 }
@@ -134,12 +202,45 @@ input[type="text"] {
     width: 48%;
 }
 
-//=========================================
+.w-50{
+    width: 50%;
+}
+
+.w-30{
+    width: 30%;
+}
+
+.snslogin{
+    margin: 5px;
+}
+
+.btn-snslogin{
+    background-color: #fafafa;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.5px 1.5px 2px;
+}
+
+.login-brand{
+    // background-color: rgb(110, 82, 46);
+    width: 30px;
+}
+
+//======form/input end=============
+//==============================
 
 
+//===========colum start==============
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        --num: calc(12 / #{$i});
+        width: calc(100% / var(--num) - 10px);
+        margin: 10px 5px 10px 5px;
+    }
+}
 // column-預設手機排版 END
-
-
 @media(min-width:768px) {
     @for $i from 1 through 12 {
         .col-md-#{$i} {
@@ -149,9 +250,7 @@ input[type="text"] {
         }
     }
 }
-
-//大於768 END 
-
+//column 大於768 END 
 @media(min-width:1200px) {
     @for $i from 1 through 12 {
         .col-lg-#{$i} {
@@ -161,12 +260,37 @@ input[type="text"] {
         }
     }
 }
+//column 大於1200 END 
 
-//大於1200 END 
+//=========================左邊界位移
+@media (min-width:768px){
+    @for $i from 1 through 12 {
+        .offset-md-#{$i}{
+            --ml-num: calc(12 / #{$i});
+            margin-left: calc(100% / var(--ml-num));
+        }
+    }
+} //ml 768 end
 
-//=========小裝置===================================
-//=========HEADER SM
+@media (min-width:768px){
+.col-md-6-center-login{
+    width: calc(100% / 2 - 80px);
+    margin: auto;
+    min-width: 280px;
+    max-width: 400px;
+    }
+.col-md-6-center-contact{
+    width: calc(100% / 2 - 20px);
+    margin: auto;
+    min-width: 300px;
+    max-width: 800px;
+    }
+}
 
+//==========Column END===========
+
+//=========內容小裝置 start===================================
+//=========HEADER SM start
 .header-logo {display: none;}
 
 .header-height{
@@ -180,12 +304,11 @@ h1.smheader{
     top: 0;
     left: 0;
     width: 90%;
-    padding-left: 7% ;
     background-color: $primary-color;
     text-align: center;
 }
 
-h1.smheader>a{
+h1.smheader>a>span{
     color: white;
     line-height: 50px;
     font-size: 20px;
@@ -199,7 +322,6 @@ h1.smheader>a>img{
 .mdheader {
     display: none;
 }
-
 
 #banner {
     margin-top: 50px;
@@ -235,7 +357,7 @@ nav>ul {
     right: 0px;
     // padding: 0px 40px;
     z-index: 200;
-    background-color: rgba($primary-color, 0.8);
+    background-color: #544a36;
     // border-radius: 8px;
     // display: none;
 }
@@ -284,25 +406,7 @@ nav>ul>li>a:hover {
 }
 
 
-
-// header>.container nav>ul>li {
-//     width: 100%;
-//     text-align: center;
-//     border-top: 1px solid whitesmoke;
-// }
-
-
-// header>.container nav>ul>li>a {
-//     color: whitesmoke;
-//     display: block;
-//     line-height: 50px;
-// }
-
-
-///////////////////////
-/// 
-
-.container>h2 {
+.container h2 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 3px;
@@ -320,6 +424,7 @@ nav>ul>li>a:hover {
     transform: translateX(-50%);
     margin-bottom: 10px;
 }
+
 
 .shop-img {
     margin-bottom: 20px;
@@ -341,9 +446,49 @@ nav>ul>li>a:hover {
 }
 
 
-//===================麵包屑=====================
 
 
+
+
+
+
+// //////////////////////////////////////////////////////
+
+//======小裝置 HOME首頁地圖相關
+
+.map-icons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.map-icons>a {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 10%;
+    max-width:45px;
+}
+
+.map>.container>.map-description>h4 {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.home-time {
+    // display: block;
+    width: 60%;
+    max-width: 280px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+//======================小裝置內頁 start=================//
+
+
+//===================麵包屑 start=====================
 .breadcrumb {
     margin-top: 10px;
     // display: block;
@@ -375,16 +520,23 @@ padding-left: 5px;
     color: $primary-color;
 }
 
+//============麵包屑end===========//
+//============內頁 start ===========
+
+.title-line-innerpage{
+    display: block;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 30px;
+}
 
 
 
 
 
 
-
-// //////////////////////////////////////////////////////
-
-/////////////////////////////////////////////////////////////
 
 
 
@@ -586,6 +738,9 @@ padding-left: 5px;
     //==================分頁HEADER+NAV=====================
     /// 
         
+    header{
+        box-shadow: 0px 0px 1px 0px rgb(188, 188, 188);
+    }
     header.inner-page {
         display: flex;
         flex-wrap: wrap;
@@ -637,9 +792,9 @@ padding-left: 5px;
 
 
 
-    //=======分頁HEADER end
+    //=======中~大裝置分頁HEADER end
 
-    //=======分頁內容 Start
+    //=======中~大裝置分頁內容 Start
     
     //麵包屑breadcrumb
 
@@ -647,13 +802,13 @@ padding-left: 5px;
 
 
 
-    //=======分頁內容 end
+    //=======中~大裝置分頁內容 end
 
 
-    //========HOME 首頁內容=========
+    //========中~大裝置HOME 首頁內容=========
 
     .container>h2 {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .title-line {
@@ -677,14 +832,15 @@ padding-left: 5px;
     }
 
     .home-content-inner>h3 {
-        font-size: 26px;
+        font-size: 28px;
+        padding-bottom: 5px;
         border-bottom: 2px solid #F4C748;
         margin-bottom: 5px;
     }
 
     
     .home-content-inner>p {
-        font-size: 17px;
+        font-size: 20px;
         line-height: 30px;
     }
 
@@ -693,11 +849,13 @@ padding-left: 5px;
         padding: 10px;
     }
 
+    .map>.container>.map-description>h4 {
+        font-size: 22px;
+        line-height: 40px;
+        font-weight: normal;
+    }
+    
 }
-
-////////////////////////////////////
-/// ////////////////////////////////
-/// 768以上
 
 @media(min-width:768px) {
     .order-md-1 {
@@ -705,32 +863,9 @@ padding-left: 5px;
         text-align: right;
     }
 }
-
-.map-icons {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    justify-content: center;
-}
-
-.map-icons>a {
-    margin-left: 30px;
-    margin-right: 30px;
-    width: 40px;
-}
-
-.map>.container>.map-description>h4 {
-    font-size: 15px;
-    line-height: 25px;
-    font-weight: normal;
-
-}
-
-.home-time {
-    // display: block;
-    width: 140px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+////////////////////////////////////
+/// ////////////////////////////////
+/// 768以上 end
 
 
 ////////////////

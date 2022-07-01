@@ -1,0 +1,67 @@
+doctype html
+html 
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title 聯絡|宅配
+        link(rel='stylesheet', href='public/css/styles.css')
+    body
+        header.inner-page
+            h1.smheader 
+                a(href="index.html")
+                    img(src="public/images/scoopi-icon-yellow.png", alt="") 
+                    span Scoopi Gelato Shop
+            .container
+                a(href="index.html").header-logo 
+                    img(src="public/images/scoopi-logo-default.png", alt="Scoopi的LOGO")
+                a#btn-nav-switch.icon-menu.icon-menu-inner-page(href="javascript:;")
+                    .icon-menu-inner
+                        img(src="public/images/icon-menu.svg", alt="icon-menu")
+                nav#primary-navigation.nav-inner-page 
+                    ul
+                        li 
+                            a(href="about.html")  關於我們
+                        li 
+                            a(href="product.html") 全部產品
+                        li 
+                            a(href="news.html") 最新消息
+                        li 
+                            a(href="contact.html") 聯絡|宅配
+                        li 
+                            a(href="login.html") 我的會員
+        .container
+            .row 
+                .col-12.col-md-6-center-contact
+                    form.form(action="javascript:;")
+                        h2 聯絡我們、宅配申請
+                        img.title-line-innerpage(src="public/images/title-line.svg", alt="")
+                        .input-group.input-contact
+                            label(for="account") 姓名
+                            input(type="text" id="account") 
+                        .input-group
+                            label(for="account") 電話
+                            input(type="text" id="account")
+                        .input-group
+                            label(for="account") 信箱
+                            input(type="text" id="account")
+                        .input-group
+                            input.radio-first(type="radio" name="purpose")
+                            |聯絡店家
+                            input(type="radio" name="purpose")
+                            |宅配申請
+                            input(type="radio" name="purpose")
+                            |宅配諮詢
+                        .input-group.input-content
+                            label(for="content" ) 內容
+                            textarea(type="text" rows="10" cols="50")
+                        .input-group 
+                            input(type="checkbox", name="")
+                            |我已閱讀
+                            span Scoopi宅配說明書
+                            |，並在內容標明品項與數量
+                        .input-group.flex-space-between
+                            .w-50 
+                                h3 送出後三個工作天內，會有專人聯繫。
+                                h3 請耐心等候，謝謝^^
+                            input.btn-primary.w-48(type="submit" value="送出")
