@@ -58,7 +58,7 @@ img {
 
 body {
   margin: 0;
-  background-image: url(public/images/white_wall.png);
+  background-image: url(/public/images/white_wall.png);
 }
 
 .w-20 {
@@ -560,7 +560,6 @@ h1.smheader > a > img {
 }
 
 #banner {
-  margin-top: 50px;
   margin-bottom: 20px;
 }
 
@@ -737,8 +736,38 @@ nav > ul > li > a:hover {
   margin-bottom: 30px;
 }
 
+.title-line-about {
+  width: 50%;
+}
+
 .longer-line {
   width: 70%;
+}
+
+.about-bg2 {
+  background-color: rgba(244, 199, 72, 0.5);
+  padding: 20px 0px;
+}
+
+.about h3 {
+  border-left: 5px solid #B0314F;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.about p {
+  font-size: 18px;
+}
+
+.about-sm {
+  width: 90%;
+  padding: 30px 5%;
+  padding-bottom: 70px;
+}
+
+.about-md {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -821,9 +850,9 @@ nav > ul > li > a:hover {
 
   header > .row {
     position: relative;
-    background-image: url(/public/images/home-Vector01.png);
-    background-size: 100%;
-    padding-bottom: 45%;
+    background-image: none;
+    height: 100vh;
+    padding: 0;
   }
 
   .index-text {
@@ -841,13 +870,6 @@ nav > ul > li > a:hover {
     left: 15%;
     width: 25%;
     animation: AN03 1s;
-  }
-
-  header > .row {
-    position: relative;
-    background-image: none;
-    height: 100vh;
-    padding: 0;
   }
 
   .index-bg {
@@ -918,7 +940,16 @@ nav > ul > li > a:hover {
   }
 
   header {
-    box-shadow: 0px 0px 1px 0px #bcbcbc;
+    background-color: rgba(242, 166, 184, 0.1);
+  }
+
+  header.inner-page {
+    background-color: rgba(242, 166, 184, 0.6);
+  }
+
+  .headerbg > img {
+    width: 100%;
+    max-width: 1920px;
   }
 
   header.inner-page {
@@ -930,6 +961,7 @@ nav > ul > li > a:hover {
   .header-logo {
     display: block;
     width: 20%;
+    filter: drop-shadow(0.5px 0.5px 0.5px rgba(128, 128, 128, 0.8));
   }
 
   nav.nav-inner-page {
@@ -943,12 +975,16 @@ nav > ul > li > a:hover {
     width: 100%;
   }
 
+  .container {
+    position: relative;
+  }
+
   body > header > .container > nav.nav-inner-page > ul {
     display: flex;
     position: absolute;
     justify-content: end;
     bottom: 0;
-    right: 10%;
+    right: 0%;
     top: auto;
     width: 75%;
     background-color: rgba(255, 255, 255, 0);
@@ -963,11 +999,31 @@ nav > ul > li > a:hover {
   body > header > .container > nav.nav-inner-page > ul a {
     display: inline;
     color: #4A3100;
+    font-weight: 500;
+    filter: drop-shadow(0px 0px 0.1px black);
   }
 
   body > header > .container > nav.nav-inner-page > ul a:hover {
-    color: #EC778F;
+    color: #B0314F;
     font-weight: 600;
+    filter: none;
+  }
+
+  .title-line-about {
+    width: 20%;
+  }
+
+  .about-sm {
+    display: none;
+  }
+
+  .about-md {
+    display: block;
+    margin: auto;
+    width: 70%;
+    max-width: 600px;
+    padding-top: 30px;
+    padding-bottom: 70px;
   }
 
   .container > h2 {

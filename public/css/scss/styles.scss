@@ -1,7 +1,9 @@
 $primary-color: #4A3100;
 $pink: #EC778F;
 $yellow: #F4C748;
-
+$light-y: #F8D57F;
+$light-p: #F2A6B8;
+$dark-p: #B0314F;
 
 
 * {
@@ -63,7 +65,7 @@ img {
 
 body {
     margin: 0;
-    background-image: url(public/images/white_wall.png);
+    background-image: url(/public/images/white_wall.png);
 }
 
 .w-20 {
@@ -195,7 +197,6 @@ p.checkbox-description{
     border: none;
     text-align: left;
     font-size: 14px;
-    
 }
 
 // .chechbox-radio{
@@ -349,7 +350,7 @@ h1.smheader>a>img{
 }
 
 #banner {
-    margin-top: 50px;
+    // margin-top: 50px;
     margin-bottom: 20px;
 }
 
@@ -469,14 +470,6 @@ nav>ul>li>a:hover {
 .home-content-inner>h3 {
     border-bottom: 2px solid #F4C748;
 }
-
-
-
-
-
-
-
-
 // //////////////////////////////////////////////////////
 
 //======小裝置 HOME首頁地圖相關
@@ -546,7 +539,7 @@ padding-left: 5px;
 }
 
 //============麵包屑end===========//
-//============內頁 start ===========
+//============小裝置內頁 start ===========
 
 .title-line-innerpage{
     display: block;
@@ -557,16 +550,46 @@ padding-left: 5px;
     margin-bottom: 30px;
 }
 
+.title-line-about {
+    width: 50%;
+}
+
 .longer-line{
     width: 70%;
 }
 
+//===========小裝置about頁==============
 
+// .about-bg1{
+//     // background-color: #F8D57F;
+//     // background-image: url(/public/images/white_wall.png);
+// }
 
+.about-bg2{
+    background-color: rgba($yellow, 0.5);
+    padding: 20px 0px;
+}
 
+.about h3{
+    border-left: 5px solid $dark-p;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
 
+.about p {
+    font-size: 18px;
+}
 
+.about-sm{
+    width: 90%;
+    padding: 30px 5%;
+    padding-bottom: 70px;
+}
 
+.about-md{
+    display: none;
+}
 
 //===================================
 ////中~大裝置========================
@@ -658,18 +681,22 @@ padding-left: 5px;
             opacity: 1;
         }
     }
-
-
     
     .index-bg {
         display: none;
     }
-    
+     
+//     header>.row {
+//         position: relative;
+//         background-image: url(/public/images/home-Vector01.png);
+//         background-size: 100%;
+//         padding-bottom: 45%;
+// }
     header>.row {
         position: relative;
-        background-image: url(/public/images/home-Vector01.png);
-        background-size: 100%;
-        padding-bottom: 45%;
+        background-image: none;
+        height: 100vh;
+        padding: 0;
     }
 
     .index-text {
@@ -687,15 +714,6 @@ padding-left: 5px;
         left: 15%;
         width: 25%;
         animation: AN03 1s
-    }
-
-
-
-    header>.row {
-        position: relative;
-        background-image: none;
-        height: 100vh;
-        padding: 0;
     }
 
     .index-bg {
@@ -766,11 +784,20 @@ padding-left: 5px;
         margin-top: 0;
     }
 
-    //==================分頁HEADER+NAV=====================
+    //==============中大裝置分頁HEADER+NAV=====================
     /// 
-        
     header{
-        box-shadow: 0px 0px 1px 0px rgb(188, 188, 188);
+        background-color: rgba($light-p,0.1);
+    }
+
+    
+    header.inner-page{
+        background-color: rgba($light-p,0.6);
+    }
+
+    .headerbg>img{
+        width: 100%;
+        max-width: 1920px;
     }
     header.inner-page {
         display: flex;
@@ -781,6 +808,7 @@ padding-left: 5px;
     .header-logo{
         display: block;
         width: 20%;
+        filter: drop-shadow(0.5px 0.5px 0.5px rgba(gray, 0.8));
     }
 
     nav.nav-inner-page{display: block;}
@@ -792,13 +820,14 @@ padding-left: 5px;
         width: 100%;
     }
 
+    .container{position: relative;}
 
     body>header>.container>nav.nav-inner-page>ul {
         display: flex;
         position: absolute;
         justify-content: end;
         bottom: 0;
-        right: 10%;
+        right: 0%;
         top: auto;
         width: 75%;
         background-color: rgba(255, 255, 255, 0);
@@ -813,11 +842,14 @@ padding-left: 5px;
     body>header>.container>nav.nav-inner-page>ul a {
         display: inline;
         color: #4A3100;
+        font-weight: 500;
+        filter: drop-shadow(0px 0px 0.1px black);
     }
 
     body>header>.container>nav.nav-inner-page>ul a:hover {
-        color: #EC778F;
+        color: $dark-p;
         font-weight: 600;
+        filter: none;
     }
 
 
@@ -830,8 +862,23 @@ padding-left: 5px;
     //麵包屑breadcrumb
 
     
+    //About中大裝置內頁
+    .title-line-about {
+        width: 20%;
+    }
 
+    .about-sm{
+        display: none;
+    }
 
+    .about-md{
+        display: block;
+        margin: auto;
+        width: 70%;
+        max-width: 600px;
+        padding-top: 30px;
+        padding-bottom: 70px;
+    }
 
     //=======中~大裝置分頁內容 end
 
