@@ -58,7 +58,7 @@ img {
 
 body {
   margin: 0;
-  background-image: url(/public/images/white_wall.png);
+  background-image: url(public/images/white_wall.png);
 }
 
 .w-20 {
