@@ -27,7 +27,7 @@
       <div class="row"> 
         <div class="col-12 col-md-6-center-contact">
           <form class="form" action="javascript:;">
-            <h2>聯絡我們、宅配申請</h2><img class="title-line-innerpage" src="public/images/title-line.svg" alt="">
+            <h2>聯絡我們、宅配申請</h2><img class="title-line-innerpage longer-line" src="public/images/title-line.svg" alt="">
             <div class="input-group input-contact">
               <label for="account">姓名</label>
               <input type="text" id="account">
@@ -42,20 +42,21 @@
             </div>
             <div class="input-group">
               <input class="radio-first" type="radio" name="purpose">聯絡店家
-              <input type="radio" name="purpose">宅配申請
+              <input class="activecheckbox" type="radio" name="purpose" value="activecheckbox">宅配申請
               <input type="radio" name="purpose">宅配諮詢
             </div>
             <div class="input-group input-content">
               <label for="content">內容</label>
               <textarea type="text" rows="10" cols="50"></textarea>
             </div>
-            <div class="input-group"> 
-              <input type="checkbox" name="">我已閱讀<span>Scoopi宅配說明書</span>，並在內容標明品項與數量
+            <div class="input-group chechbox-radio">
+              <input type="checkbox" name="">
+              <p class="checkbox-description">宅配申請者已閱讀<span>Scoopi宅配說明書</span>，並在內容標明品項與數量</p>
             </div>
             <div class="input-group flex-space-between">
               <div class="w-50"> 
-                <h3>送出後三個工作天內，會有專人聯繫。</h3>
-                <h3>請耐心等候，謝謝^^</h3>
+                <h3>送出約三個工作天內會有專人聯繫。</h3>
+                <h3>請耐心等候，謝謝！</h3>
               </div>
               <input class="btn-primary w-48" type="submit" value="送出">
             </div>
@@ -63,5 +64,7 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="public/js/script.js"></script>
   </body>
 </html>
