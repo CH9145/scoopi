@@ -564,10 +564,28 @@ padding-left: 5px;
 //     // background-color: #F8D57F;
 //     // background-image: url(/public/images/white_wall.png);
 // }
+.about-bg1>.row>.row>div{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 
 .about-bg2{
-    background-color: rgba($yellow, 0.5);
+    background-color: rgba($yellow, 1);
     padding: 20px 0px;
+}
+
+.abt-in2{
+    background-color: #efefef;
+    box-sizing: border-box;
+    padding: 50px 30px;
+    border-radius: 40px 100px 0px 40px;
+    // border-bottom: 5px dotted  rgba($yellow, 0.8);
+    // border-left: 10px dashed rgba($yellow, 0.8);
+    filter: drop-shadow(1px 2px 2px rgba($primary-color, 0.2));
+}
+
+.img-shadow{
+    filter: drop-shadow(1px 2px 2px rgba($primary-color, 0.2));
 }
 
 .about h3{
@@ -579,12 +597,13 @@ padding-left: 5px;
 
 .about p {
     font-size: 18px;
+    line-height: 30px;
+    margin-top: 10px;
 }
 
 .about-sm{
     width: 90%;
     padding: 30px 5%;
-    padding-bottom: 70px;
 }
 
 .about-md{
@@ -659,8 +678,14 @@ padding-left: 5px;
     @keyframes AN03 {
         0% {
             opacity: 0;
-            transform:  translate(10px,-10px) rotate(-3deg);
+            // transform:  translate(10px,-10px) rotate(-3deg);
         }
+
+        20% {
+            opacity: 0;
+            transform:  translate(10px,-10px) rotate(2deg);
+        }
+
 
         100% {
             opacity: 1;
@@ -672,13 +697,14 @@ padding-left: 5px;
         0% {
             opacity: 0;}
 
-        40%{
-            opacity: 0;
+        20%{
+            opacity: .3;
             transform:  translate(0px,-10px) ;
         }
 
-        100% {
+        70% {
             opacity: 1;
+            transform:  translate(0px,0px) ;
         }
     }
     
@@ -705,7 +731,7 @@ padding-left: 5px;
         right: 20%;
         width: 20%;
         z-index: 10;
-        animation: ANfadein 3s;
+        animation: ANfadein 4s;
     }
 
     .index-logo {
@@ -713,7 +739,7 @@ padding-left: 5px;
         bottom: 8%;
         left: 15%;
         width: 25%;
-        animation: AN03 1s
+        animation: AN03 5s
     }
 
     .index-bg {
@@ -792,7 +818,7 @@ padding-left: 5px;
 
     
     header.inner-page{
-        background-color: rgba($light-p,0.6);
+        background-color: $pink;
     }
 
     .headerbg>img{
@@ -807,8 +833,15 @@ padding-left: 5px;
 
     .header-logo{
         display: block;
+        box-sizing: border-box;
         width: 20%;
-        filter: drop-shadow(0.5px 0.5px 0.5px rgba(gray, 0.8));
+        background-color: rgba(white,0.9) ;
+        border: 8px double $pink;
+        border-radius: 50%;
+        padding: 0px 10px;
+        margin-top: 10px;
+        margin-left: 40px;
+        // filter: drop-shadow(0px 0px 10px rgba(white,1));
     }
 
     nav.nav-inner-page{display: block;}
@@ -841,15 +874,13 @@ padding-left: 5px;
 
     body>header>.container>nav.nav-inner-page>ul a {
         display: inline;
-        color: #4A3100;
+        color: white;
         font-weight: 500;
-        filter: drop-shadow(0px 0px 0.1px black);
     }
 
     body>header>.container>nav.nav-inner-page>ul a:hover {
-        color: $dark-p;
+        color: white;
         font-weight: 600;
-        filter: none;
     }
 
 
@@ -878,6 +909,11 @@ padding-left: 5px;
         max-width: 600px;
         padding-top: 30px;
         padding-bottom: 70px;
+    }
+
+    .about-outer{
+        display: flex;
+        align-items: center;
     }
 
     //=======中~大裝置分頁內容 end
