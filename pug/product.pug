@@ -23,7 +23,7 @@ html
                         li 
                             a(href="about.html")  關於我們
                         li 
-                            a(href="product.html") 全部產品
+                            a(href="product.html") 產品介紹
                         li 
                             a(href="news.html") 最新消息
                         li 
@@ -34,14 +34,16 @@ html
             img.img-fluid(src="public/images/header-innerpage-bg.svg")
         .smheader-height
         //- .container.product
-        //-     img(src="public/images/product.jpg", alt="" width="100%")
+        //-     img(src="public/images/product-01.jpg", alt="" width="100%")
         .container.row
             .breadcrumb
                 a.breadcrumb-first(href='index.html') 首頁
                 span ＞
-                a.breadcrumb.active(href='product.html') 全部產品
+                a(href='product.html') 產品介紹
+                span ＞
+                a.breadcrumb.active(href='product.html') 所有口味
             aside.col-12.col-md-3.col-lg-3
-                .sidebar
+                .sidebar.product-side
                     ul
                         li
                             a.btn-primary(href='#all-flavor') 所有口味
@@ -57,15 +59,56 @@ html
             main.col-12.col-md-9.col-lg-9
                 .product-flavor
                     h2.text-left 所有口味
+                    img.title-line-innerpage.longer-line(src="public/images/title-line.svg", alt="")
                     .row
-                        .col-12.col-md-6.col-lg-3
-                            a.img-wrap(href='')
-                                .img-overlay
-                                    img.img-fluid(src='https://www.fillmurray.com/500/500' alt='')
-                                    span.icon-new NEW
-                            p.title.text-center
-                                a(href='') 草莓優格
-                            p.description.text-center 說明
+                        .col-12.col-md-6.col-lg-4
+                            .product-img
+                                a.img-wrap(href='#')
+                                    .img-overlay
+                                        img.img-fluid(src='public/images/f-strawberry.jpg' alt='草莓優格')
+                                        //- span.icon-new NEW
+                                a.product-title.text-center(href='#') 草莓優格
+                            p.product-text.description.text-center 來自悠悠農場的草莓，搭配嚴選ABC優格，莓果香氣十足，酸甜可口
+                        .col-12.col-md-6.col-lg-4
+                            .product-img
+                                a.img-wrap(href='#')
+                                    .img-overlay
+                                        img.img-fluid(src='public/images/f-banana.jpg' alt='草莓優格')
+                                        //- span.icon-new NEW
+                                a.product-title.text-center(href='#') 香草香蕉
+                            p.product-text.description.text-center 與在地蕉農合作推出，搭配香草莢迷人香氣，不可不試的香香組合！
+                        .col-12.col-md-6.col-lg-4
+                            .product-img
+                                a.img-wrap(href='#')
+                                    .img-overlay
+                                        img.img-fluid(src='public/images/f-matcha.jpg' alt='草莓優格')
+                                        //- span.icon-new NEW
+                                a.product-title.text-center(href='#') 經典抹茶
+                            p.product-text.description.text-center 經典款宇治抹茶。降低糖分以突顯抹茶苦中帶甘的風味，並加入適量鮮奶，中和澀味。
+                        .col-12.col-md-6.col-lg-4
+                            .product-img
+                                a.img-wrap(href='#')
+                                    .img-overlay
+                                        img.img-fluid(src='public/images/f-chocolate.jpg' alt='草莓優格')
+                                        //- span.icon-new NEW
+                                a.product-title.text-center(href='#') 濃巧克力
+                            p.product-text.description.text-center 吃得到柔軟巧克力塊的苦甜巧克力冰淇淋，無論冬季或夏季都是人氣No.1
+                        .col-12.col-md-6.col-lg-4
+                            .product-img
+                                a.img-wrap(href='#')
+                                    .img-overlay
+                                        img.img-fluid(src='public/images/f-peanut.jpg' alt='草莓優格')
+                                        //- span.icon-new NEW
+                                a.product-title.text-center(href='#') 花生
+                            p.product-text.description.text-center 帶有濃厚堅果香氣、醇厚滑順的花生口味，吃一球便能補充整日能量
+                        .col-12.col-md-6.col-lg-4
+                            .product-img
+                                a.img-wrap(href='#')
+                                    .img-overlay
+                                        img.img-fluid(src='public/images/f-mango.jpg' alt='草莓優格')
+                                        //- span.icon-new NEW
+                                a.product-title.text-center(href='#') 芒果
+                            p.product-text.description.text-center 選用當季甜度高的芒果，冰涼又酸甜的好滋味，讓人欲罷不能
 
         footer 
             .container 

@@ -58,7 +58,7 @@ img {
 
 body {
   margin: 0;
-  background-image: url(/images/white_wall.png);
+  background-image: url(../images/white_wall.png);
 }
 
 .w-20 {
@@ -639,7 +639,7 @@ nav > ul > li > a:hover {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 3px;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 900;
 }
 
@@ -780,12 +780,51 @@ nav > ul > li > a:hover {
 }
 
 .about-sm {
-  width: 90%;
-  padding: 30px 5%;
+  width: 100%;
+  padding: 30px 0px;
 }
 
 .about-md {
   display: none;
+}
+
+.product-img {
+  margin: auto;
+  width: 70%;
+  padding: 0.5em;
+  background-color: #F4C748;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.product-img > .product-title {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(74, 49, 0, 0.4);
+  color: white;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.1em;
+  bottom: 0px;
+  padding-bottom: 12px;
+}
+
+.product-img img {
+  border-radius: 50%;
+}
+
+.product-text {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 5px dotted #F4C748;
+}
+
+main > .product-flavor {
+  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
@@ -1027,12 +1066,23 @@ nav > ul > li > a:hover {
   body > header > .container > nav.nav-inner-page > ul a {
     display: inline;
     color: white;
+    font-size: 20px;
     font-weight: 500;
   }
 
   body > header > .container > nav.nav-inner-page > ul a:hover {
     color: white;
     font-weight: 600;
+  }
+
+  .breadcrumb {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
+  .breadcrumb > a {
+    margin-top: 20px;
+    font-size: 18px;
   }
 
   .title-line-about {
@@ -1046,8 +1096,8 @@ nav > ul > li > a:hover {
   .about-md {
     display: block;
     margin: auto;
-    width: 70%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 900px;
     padding-top: 30px;
     padding-bottom: 70px;
   }
@@ -1057,8 +1107,68 @@ nav > ul > li > a:hover {
     align-items: center;
   }
 
+  .about-outer > .order-md-1 {
+    align-self: flex-end;
+  }
+
+  .about p {
+    font-size: 22px;
+    line-height: 32px;
+    margin-top: 10px;
+  }
+
+  .about h2 {
+    margin-top: 20px;
+    font-size: 26px;
+  }
+
+  .title-line-innerpage.longer-line {
+    width: 30%;
+  }
+
+  .product-img {
+    margin: auto;
+    width: 80%;
+    padding: 0.8em;
+  }
+
+  .product-img > .product-title {
+    font-size: 26px;
+    line-height: 55px;
+    letter-spacing: 0.1em;
+    bottom: -80px;
+    padding-bottom: 5px;
+    transition: all 0.5s;
+  }
+
+  .product-img:hover .product-title {
+    bottom: 0;
+  }
+
+  .product-text {
+    height: 90px;
+    margin-top: 20px;
+    padding-bottom: 0px;
+    border-bottom: 8px dotted #F4C748;
+  }
+
+  main > .product-flavor {
+    margin-bottom: 40px;
+  }
+
+  main > .product-flavor > h2 {
+    font-size: 26px;
+  }
+
+  .product-side > ul > li > .btn-primary {
+    line-height: 40px;
+    font-size: 21px;
+    margin-top: 20px;
+    letter-spacing: 0.1em;
+  }
+
   .container > h2 {
-    font-size: 36px;
+    font-size: 26px;
   }
 
   .title-line {
@@ -1132,6 +1242,7 @@ footer > .container > .row > .col-12 {
   flex-wrap: wrap;
   justify-content: center;
   border-bottom: 1px solid white;
+  padding-top: 5px;
 }
 
 .social-icon > a {
@@ -1173,17 +1284,22 @@ footer > .container > .row > div > .copyright {
 }
 
 @media (min-width: 768px) {
+  footer > .container > .row > div {
+    align-self: flex-end;
+    padding-bottom: 20px;
+  }
+
   .footer-logo {
     display: block;
     width: 60%;
     padding: 0% 20%;
-    margin-bottom: 1%;
+    margin-bottom: 0.5em;
   }
 
   footer > .container > .row > div > p {
     color: white;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 22px;
     letter-spacing: 1px;
   }
 
