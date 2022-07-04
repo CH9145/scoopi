@@ -4,7 +4,10 @@ $yellow: #F4C748;
 $light-y: #F8D57F;
 $light-p: #F2A6B8;
 $dark-p: #B0314F;
-
+::selection{
+    background-color: $yellow;
+    color: white;
+}
 
 * {
     margin: 0;
@@ -34,6 +37,10 @@ a {
     padding: 5px 0px;
     margin-bottom: 10px;
     text-align: center;
+}
+
+.btn-primary:hover{
+    opacity: 0.9;
 }
 
 .btn-secondary{
@@ -121,7 +128,7 @@ body {
     color: rgb(125, 125, 125);
     border-top: 1px solid rgb(206, 206, 206);
     letter-spacing: 1px;
-    padding-top: 5px;
+    padding: 8px 0px;
 }
 
 
@@ -137,15 +144,18 @@ input.btn-primary{
 input.btn-secondary{
     letter-spacing: 5px;
 }
-
-.forget-id>p{
+.forget-id{position: relative;}
+.forget-id>a{
     font-size: 15px;
-    text-align:right;
+    // text-align:right;
     cursor: pointer;
-    color: #544a36;
+    color: #6e6147;
+    position: absolute;
+    right: 0;
+
 }
 
-.forget-id>p:hover{
+.forget-id>a:hover{
     color: black;
 }
 
@@ -161,6 +171,7 @@ input{
     border: 1px solid gray;
     line-height: 30px;
     padding-left: 10px;
+    // background-color: #fafafa;
 }
 
 textarea[type="text"]{
@@ -239,14 +250,14 @@ p.checkbox-description>span:hover{
     margin: 5px;
 }
 
-.btn-snslogin{
-    background-color: #fafafa;
-    padding: 10px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.5px 1.5px 2px;
-}
+// .btn-snslogin{
+//     background-color: #fafafa;
+//     padding: 10px;
+//     width: 30px;
+//     height: 30px;
+//     border-radius: 50%;
+//     box-shadow: rgba(0, 0, 0, 0.15) 1.5px 1.5px 2px;
+// }
 
 .login-brand{
     // background-color: rgb(110, 82, 46);
@@ -631,7 +642,7 @@ padding-left: 5px;
     left: 0;
     background-color:rgba($primary-color, 0.4) ;
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 40px;
     letter-spacing: 0.1em;
     bottom:0px;
@@ -644,6 +655,7 @@ padding-left: 5px;
  }
 
  .product-text{
+    height: 60px;
     margin-top: 20px;
     padding-bottom: 20px;
     border-bottom: 5px dotted $yellow;
@@ -856,6 +868,8 @@ main>.product-flavor{
         width: 50px;
         text-align: center;
         border-radius: 5px;
+        Box-shadow: 0.5px 0.5px 3px 0.3px rgba($primary-color,0.4),
+        1px 1px 3px 1px rgba(white,0.1) inset;
     }
 
     #banner{
@@ -1016,7 +1030,7 @@ main>.product-flavor{
         bottom:0;
     }
     .product-text{
-        height: 90px;
+        height: 100px;
         margin-top: 20px;
         padding-bottom: 0px;
         border-bottom: 8px dotted $yellow;
