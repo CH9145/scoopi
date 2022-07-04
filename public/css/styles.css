@@ -827,6 +827,12 @@ main > .product-flavor {
   margin-bottom: 20px;
 }
 
+.construction {
+  border-radius: 10px;
+  width: 60%;
+  margin: 20%;
+}
+
 @media (min-width: 768px) {
   h1.smheader {
     display: none;
