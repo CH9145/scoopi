@@ -2,6 +2,8 @@ $('#btn-nav-switch').on('click',function(){
     $('nav').toggleClass('active')
 })
 
+
+// 卷軸回到top
 let offsetTop
 let product1Top = $('.product-section-1').offset().top
     $(window).scroll(function(){
@@ -17,6 +19,14 @@ let product1Top = $('.product-section-1').offset().top
 $('.page-Top').on('click',function(){
     $('html',body).animate({scrollTop:0})
 }) //.page-top end
+
+
+//最新消息頁 摺疊
+$('.news-inner').on('click', function(){
+    $(this).toggleClass('active')
+    $(this).siblings().removeClass('active')
+}) //最新消息摺疊 end
+
 
 
 ///submenu

@@ -8,6 +8,7 @@ html
         link(rel="icon", href="public/images/scoopi-icon-yellow.ico", type="image/x-icon")
         link(rel="shortcut icon", href="public/images/scoopi-icon-yellow.ico", type="image/x-icon")
         link(rel='stylesheet', href='public/css/styles.css')
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
     body
         header.inner-page
             h1.smheader 
@@ -37,9 +38,21 @@ html
         .smheader-height
 
         main 
+            h2
+                span 最新消息
             .container.row 
                 img.construction.img-fluid(src="public/images/construction.jpg")
-        
+            .container.row 
+                .col-6.col-md-4
+                    .news-outer
+                        .news-inner
+                            img.news-img.img-fluid(src="public/images/news-banner.jpg", alt="")
+                            span.icon-new NEW
+                            .news-date 時間：2022年7月
+                                .click-more more
+                                    //- i.fa-solid.fa-caret-down
+                        .news-more
+                            p 最新口味推出囉！即日起限量供應中，歡迎來店品嘗～
         footer 
             .container 
                 .row
