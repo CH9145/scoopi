@@ -122,7 +122,7 @@ h2 > span::after {
   height: 20px;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url(/public/images/home-line-title.svg);
+  background-image: url(../images/home-line-title.svg);
 }
 
 .form {
@@ -673,15 +673,6 @@ nav > ul > li > a:hover {
   height: 50px;
 }
 
-.title-line {
-  display: block;
-  width: 45%;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 10px;
-}
-
 .shop-img {
   margin-bottom: 20px;
 }
@@ -755,15 +746,6 @@ nav > ul > li > a:hover {
 
 .breadcrumb > a.breadcrumb.active {
   color: #4A3100;
-}
-
-.title-line-innerpage {
-  display: block;
-  width: 50%;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 30px;
 }
 
 .title-line-about {
@@ -1206,10 +1188,6 @@ main.news {
     font-size: 18px;
   }
 
-  .title-line-about {
-    width: 20%;
-  }
-
   .about-sm {
     display: none;
   }
@@ -1303,10 +1281,6 @@ main.news {
     right: -20px;
   }
 
-  .title-line-innerpage.longer-line {
-    width: 30%;
-  }
-
   .product-img {
     margin: auto;
     width: 80%;
@@ -1338,7 +1312,7 @@ main.news {
   }
 
   .news-width {
-    width: 28%;
+    width: 100%;
     margin: auto;
     margin-bottom: 50px;
   }
@@ -1348,14 +1322,6 @@ main.news {
     font-size: 21px;
     margin-top: 20px;
     letter-spacing: 0.1em;
-  }
-
-  .title-line {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30%;
-    margin-bottom: 10px;
   }
 
   .home-content {

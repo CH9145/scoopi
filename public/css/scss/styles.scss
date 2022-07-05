@@ -131,7 +131,7 @@ h2>span::after {
     // background-color: rgb(150, 81, 150);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url(/public/images/home-line-title.svg);
+    background-image: url(../images/home-line-title.svg);
 }
 
 
@@ -499,17 +499,6 @@ nav>ul>li>a:hover {
     height: 50px;
 }
 
-.title-line {
-    // display: flex;
-    // justify-content: center;
-    display: block;
-    width: 45%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 10px;
-}
-
 
 .shop-img {
     margin-bottom: 20px;
@@ -600,15 +589,6 @@ nav>ul>li>a:hover {
 
 //============麵包屑end===========//
 //============小裝置內頁 start ===========
-
-.title-line-innerpage {
-    display: block;
-    width: 50%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 30px;
-}
 
 .title-line-about {
     width: 50%;
@@ -765,6 +745,18 @@ main>.product-flavor {
     position: relative;
 }
 
+// .news-more{
+//     box-sizing: border-box;
+//     font-size: 16px;
+//     font-weight:normal;
+//     background-color: #fafafa;
+//     position: absolute;
+//     top: 40px;
+//     left: 0;
+//     width: 100%;
+//     z-index: 40;
+// }
+
 .icon-new {
     position: absolute;
     text-align: center;
@@ -812,6 +804,7 @@ main.news {
     padding: 10%;
     margin: auto;
 }
+
 
 
 //===================================
@@ -1115,9 +1108,6 @@ main.news {
     }
 
     //About中大裝置內頁
-    .title-line-about {
-        width: 20%;
-    }
 
     .about-sm {
         display: none;
@@ -1214,9 +1204,6 @@ main.news {
 
     //=======大裝置about end====
     //=======大裝置procuct start======
-    .title-line-innerpage.longer-line {
-        width: 30%;
-    }
 
     .product-img {
         margin: auto;
@@ -1253,7 +1240,7 @@ main.news {
     //===========中~大裝置最新消息NEWS start =====
 
     .news-width {
-        width: 28%;
+        width: 100%;
         margin: auto;
         margin-bottom: 50px;
     }
@@ -1267,14 +1254,6 @@ main.news {
         font-size: 21px;
         margin-top: 20px;
         letter-spacing: 0.1em;
-    }
-
-    .title-line {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 30%;
-        margin-bottom: 10px;
     }
 
 
