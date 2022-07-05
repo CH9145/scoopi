@@ -4,7 +4,8 @@ $yellow: #F4C748;
 $light-y: #F8D57F;
 $light-p: #F2A6B8;
 $dark-p: #B0314F;
-::selection{
+
+::selection {
     background-color: $yellow;
     color: white;
 }
@@ -27,7 +28,7 @@ a {
     font-size: 20px;
 }
 
-.btn-primary{
+.btn-primary {
     display: block;
     background-color: #EC778F;
     color: white;
@@ -39,11 +40,11 @@ a {
     text-align: center;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     opacity: 0.9;
 }
 
-.btn-secondary{
+.btn-secondary {
     display: block;
     background-color: $yellow;
     color: white;
@@ -55,7 +56,7 @@ a {
     text-align: center;
 }
 
-.btn-white{
+.btn-white {
     display: block;
     background-color: #fafafa;
     border: 0.3px solid $primary-color;
@@ -73,7 +74,7 @@ img {
 body {
     margin: 0;
     background-image: url(../images/white_wall.png);
-    overflow-x: hidden;// 確定不跑版才能用
+    overflow-x: hidden; // 確定不跑版才能用
 }
 
 .w-20 {
@@ -105,20 +106,20 @@ body {
     text-align: center;
 }
 
-h2{
+h2 {
     text-align: center;
     padding-bottom: 30px;
     font-size: 26px;
     padding-top: 30px;
 }
 
-h2>span{
+h2>span {
     text-align: center;
     position: relative;
 }
 
-h2>span::after{
-    content:'';
+h2>span::after {
+    content: '';
     position: absolute;
     display: block;
     top: 0px;
@@ -143,16 +144,18 @@ h2>span::after{
 
 
 
-.form{
+.form {
     // background-color: pink;
     margin-bottom: 80px;
     margin-top: 50px;
 }
-.input-group{
+
+.input-group {
     display: flex;
     margin-bottom: 20px;
 }
-.input-group>p{
+
+.input-group>p {
     display: inline-block;
     text-align: center;
     width: 100%;
@@ -164,20 +167,24 @@ h2>span::after{
 }
 
 
-.input-group h3{
+.input-group h3 {
     font-size: x-small;
     color: rgb(125, 125, 125);
 }
 
-input.btn-primary{
+input.btn-primary {
     letter-spacing: 5px;
 }
 
-input.btn-secondary{
+input.btn-secondary {
     letter-spacing: 5px;
 }
-.forget-id{position: relative;}
-.forget-id>a{
+
+.forget-id {
+    position: relative;
+}
+
+.forget-id>a {
     font-size: 15px;
     // text-align:right;
     cursor: pointer;
@@ -187,17 +194,18 @@ input.btn-secondary{
 
 }
 
-.forget-id>a:hover{
+.forget-id>a:hover {
     color: black;
 }
 
-label{
+label {
     display: block;
     width: 20%;
     font-size: 20px;
     letter-spacing: 0.3em;
 }
-input{
+
+input {
     // border: none;
     border-radius: 4px;
     border: 1px solid gray;
@@ -206,26 +214,27 @@ input{
     // background-color: #fafafa;
 }
 
-textarea[type="text"]{
+textarea[type="text"] {
     width: 80%;
     padding: 10px;
     border-radius: 4px;
     border: 1px solid gray;
-    
+
 }
 
 input[type="text"] {
     width: 80%;
 }
-input[type="password"]{
+
+input[type="password"] {
     width: 80%;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
     margin-right: 6px;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     font-size: 18px;
 }
 
@@ -233,16 +242,16 @@ input[type="submit"]:hover {
     opacity: 0.9;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     margin-left: 20px;
     margin-right: 5px;
 }
 
-input.radio-first{
+input.radio-first {
     margin-left: 0px;
 }
 
-p.checkbox-description{
+p.checkbox-description {
     color: #4A3100;
     border: none;
     text-align: left;
@@ -253,16 +262,16 @@ p.checkbox-description{
 //     display: none;
 // }
 
-.chechbox-radio.active{
+.chechbox-radio.active {
     display: block;
 }
 
-p.checkbox-description>span{
+p.checkbox-description>span {
     color: chocolate;
     cursor: pointer;
 }
 
-p.checkbox-description>span:hover{
+p.checkbox-description>span:hover {
     border-bottom: 1px solid chocolate;
 }
 
@@ -270,22 +279,23 @@ p.checkbox-description>span:hover{
 //     letter-spacing: 0px;
 // }
 
-.flex-space-between{
+.flex-space-between {
     justify-content: space-between;
 }
-.w-48{
+
+.w-48 {
     width: 48%;
 }
 
-.w-50{
+.w-50 {
     width: 50%;
 }
 
-.w-30{
+.w-30 {
     width: 30%;
 }
 
-.snslogin{
+.snslogin {
     margin: 5px;
 }
 
@@ -298,7 +308,7 @@ p.checkbox-description>span:hover{
 //     box-shadow: rgba(0, 0, 0, 0.15) 1.5px 1.5px 2px;
 // }
 
-.login-brand{
+.login-brand {
     // background-color: rgb(110, 82, 46);
     width: 30px;
 }
@@ -315,6 +325,7 @@ p.checkbox-description>span:hover{
         margin: 10px 5px 10px 5px;
     }
 }
+
 // column-預設手機排版 END
 @media(min-width:768px) {
     @for $i from 1 through 12 {
@@ -325,6 +336,7 @@ p.checkbox-description>span:hover{
         }
     }
 }
+
 //column 大於768 END 
 @media(min-width:1200px) {
     @for $i from 1 through 12 {
@@ -335,30 +347,34 @@ p.checkbox-description>span:hover{
         }
     }
 }
+
 //column 大於1200 END 
 
 //=========================左邊界位移
-@media (min-width:768px){
+@media (min-width:768px) {
     @for $i from 1 through 12 {
-        .offset-md-#{$i}{
+        .offset-md-#{$i} {
             --ml-num: calc(12 / #{$i});
             margin-left: calc(100% / var(--ml-num));
         }
     }
-} //ml 768 end
+}
 
-@media (min-width:768px){
-.col-md-6-center-login{
-    width: calc(100% / 2 - 80px);
-    margin: auto;
-    min-width: 280px;
-    max-width: 400px;
+//ml 768 end
+
+@media (min-width:768px) {
+    .col-md-6-center-login {
+        width: calc(100% / 2 - 80px);
+        margin: auto;
+        min-width: 280px;
+        max-width: 400px;
     }
-.col-md-6-center-contact{
-    width: calc(100% / 2 - 20px);
-    margin: auto;
-    min-width: 300px;
-    max-width: 800px;
+
+    .col-md-6-center-contact {
+        width: calc(100% / 2 - 20px);
+        margin: auto;
+        min-width: 300px;
+        max-width: 800px;
     }
 }
 
@@ -367,13 +383,15 @@ p.checkbox-description>span:hover{
 //=========內容小裝置 start===================================
 //=========HEADER SM start
 
-.header-logo {display: none;}
+.header-logo {
+    display: none;
+}
 
-.smheader-height{
+.smheader-height {
     height: 50px;
 }
 
-h1.smheader{
+h1.smheader {
     display: block;
     position: fixed;
     z-index: 200;
@@ -384,13 +402,13 @@ h1.smheader{
     text-align: center;
 }
 
-h1.smheader>a>span{
+h1.smheader>a>span {
     color: white;
     line-height: 50px;
     font-size: 20px;
 }
 
-h1.smheader>a>img{
+h1.smheader>a>img {
     height: 30px;
     padding: 10px 5px;
 }
@@ -511,6 +529,7 @@ nav>ul>li>a:hover {
 .home-content-inner>h3 {
     border-bottom: 2px solid #F4C748;
 }
+
 // //////////////////////////////////////////////////////
 
 //======小裝置 HOME首頁地圖相關
@@ -525,7 +544,7 @@ nav>ul>li>a:hover {
     margin-left: 30px;
     margin-right: 30px;
     width: 10%;
-    max-width:45px;
+    max-width: 45px;
 }
 
 .map>.container>.map-description>h4 {
@@ -561,7 +580,7 @@ nav>ul>li>a:hover {
 }
 
 .breadcrumb>span {
-padding-left: 5px;
+    padding-left: 5px;
 }
 
 .breadcrumb>a {
@@ -582,7 +601,7 @@ padding-left: 5px;
 //============麵包屑end===========//
 //============小裝置內頁 start ===========
 
-.title-line-innerpage{
+.title-line-innerpage {
     display: block;
     width: 50%;
     position: relative;
@@ -595,7 +614,7 @@ padding-left: 5px;
     width: 50%;
 }
 
-.longer-line{
+.longer-line {
     width: 70%;
 }
 
@@ -605,17 +624,17 @@ padding-left: 5px;
 //     // background-color: #F8D57F;
 //     // background-image: url(/public/images/white_wall.png);
 // }
-.about-bg1>.row>.row>div{
+.about-bg1>.row>.row>div {
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
-.about-bg2{
+.about-bg2 {
     background-color: rgba($yellow, 1);
     padding: 20px 0px;
 }
 
-.abt-in2{
+.abt-in2 {
     background-color: #efefef;
     box-sizing: border-box;
     padding: 50px 30px;
@@ -625,11 +644,11 @@ padding-left: 5px;
     filter: drop-shadow(1px 2px 2px rgba($primary-color, 0.2));
 }
 
-.img-shadow{
+.img-shadow {
     filter: drop-shadow(1px 2px 2px rgba($primary-color, 0.2));
 }
 
-.about h3{
+.about h3 {
     border-left: 5px solid $dark-p;
     padding-left: 10px;
     margin-bottom: 10px;
@@ -642,19 +661,19 @@ padding-left: 5px;
     margin-top: 10px;
 }
 
-.about-sm{
+.about-sm {
     width: 100%;
     padding: 30px 0px;
 }
 
-.about-md{
+.about-md {
     display: none;
 }
 
- //=======小裝置about end======
- //=======小裝置procuct start======
+//=======小裝置about end======
+//=======小裝置procuct start======
 
- .product-img{
+.product-img {
     margin: auto;
     width: 70%;
     padding: 0.5em;
@@ -662,90 +681,89 @@ padding-left: 5px;
     position: relative;
     border-radius: 50%;
     overflow: hidden;
- }
+}
 
- .product-img>.product-title{
+.product-img>.product-title {
     position: absolute;
     display: block;
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color:rgba($primary-color, 0.4) ;
+    background-color: rgba($primary-color, 0.4);
     color: white;
     font-size: 24px;
     line-height: 40px;
     letter-spacing: 0.1em;
-    bottom:0px;
+    bottom: 0px;
     padding-bottom: 12px;
 }
 
 
-.product-img img{
+.product-img img {
     border-radius: 50%;
- }
+}
 
- .product-text{
+.product-text {
     height: 60px;
     margin-top: 20px;
     padding-bottom: 20px;
     border-bottom: 5px dotted $yellow;
- }
+}
 
 
-main>.product-flavor{
+main>.product-flavor {
     margin-bottom: 20px;
 }
 
 
 //=========小裝置product end=====
 //=========小裝置NEWS start======
+.news-width {
+    width: 90%;
+    margin: auto;
+}
 
+.news-outer {
+    border: 1px solid $primary-color;
+    border-radius: 1px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    padding: 10px 8px 10px 8px;
+    /* 上右下左 */
+    cursor: pointer;
+}
 
-        .news-outer{
-            border:1px solid $primary-color;
-            border-radius: 1px;
-            margin-bottom: 20px;
-            line-height: 30px;
-            padding: 10px 8px 10px 8px; 
-            /* 上右下左 */
-            cursor: pointer;
-        }
+.news-outer.active .news-more {
+    display: block;
+}
 
-        .news-outer.active .news-more{
-            display: block;
-        }
+.news-outer.active .click-more {
+    transform: rotateX(180deg);
+}
 
-        .news-outer.active .click-more{
-            transform: rotateX(180deg);
-        }
-        
-        .click-more{
-            position: absolute;   
-            line-height: 30px;
-            text-align: center;
-            background-color: gainsboro;
-            right: 0px;
-            top:0px;
-            transition: transform .1s;
+.click-more {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    text-align: center;
+    // background-color: gainsboro;
+    transition: transform .1s;
+}
 
-                line-height: 30px;
-                text-align: center;
-                // background-color: gainsboro;
-                color: #B0314F;
-                right: 0px;
-                top: auto;
-                bottom:0px;
-                transition: transform .2s;
-            
-        }
-        .news-more{
-            padding: 10px;
-            display: none;
-            color: rgb(81, 81, 81);
-        }
-        .news-inner{
-            position: relative;
-        }
+.news-more {
+    padding: 10px;
+    display: none;
+    color: rgb(81, 81, 81);
+    cursor:default;
+}
+
+.news-more>a{
+    cursor: pointer;
+}
+
+.news-inner {
+    position: relative;
+}
 
 .icon-new {
     position: absolute;
@@ -754,35 +772,45 @@ main>.product-flavor{
     line-height: 50px;
     background-color: rgb(172, 46, 14);
     color: white;
-    border-radius: 100%;
+    border-radius: 50%;
     border: 3px double rgb(229, 118, 118);
-    top: -10px;
+    top: -20px;
     right: -15px;
     transform: rotate(20deg);
 }
 
-.news-date{
+.news-title {
     position: relative;
     padding-left: 10px;
     margin-top: 10px;
+    font-weight: bold;
 }
 
+.news-more>p.date{
+    font-size: 14px;
+    text-align: right;
+    color: gray;
+}
 
-// .news-more{
-//     padding: 10px;
-//     display: none;
-//     color: rgb(81, 81, 81);
-// }
+.news-more>a.news-link{
+    font-size: 14px;
+    color: #e62a56;
+    text-decoration: underline;
+}
 
-// .news-outer.active .news-more{
-//     display: block;
-// }
+.news-more>a.news-link:hover{
+    color: #ad1035;
+}
+
+main.news {
+    padding-bottom: 200px;
+}
 
 //網頁裝置中的圖片
-.construction{
-    border-radius: 10px;
+.construction {
     width: 60%;
-    margin: 10%;
+    padding: 10%;
+    margin: auto;
 }
 
 
@@ -790,7 +818,6 @@ main>.product-flavor{
 ////中~大裝置========================
 
 @media(min-width:768px) {
-
 
     h1.smheader {
         display: none;
@@ -801,7 +828,7 @@ main>.product-flavor{
         height: 100vh;
     }
 
-    .smheader-height{
+    .smheader-height {
         display: none;
     }
 
@@ -814,7 +841,7 @@ main>.product-flavor{
         top: 0%;
         width: 30%;
         z-index: 1;
-        transform:  .3s;
+        transform: .3s;
         // animation: AN01 2s
     }
 
@@ -842,7 +869,7 @@ main>.product-flavor{
     @keyframes AN02 {
         0% {
             opacity: 0;
-            transform:  translate(30px, 20px) scale(0.9);
+            transform: translate(30px, 20px) scale(0.9);
         }
 
         100% {
@@ -859,7 +886,7 @@ main>.product-flavor{
 
         20% {
             opacity: 0;
-            transform:  translate(10px,-10px) rotate(2deg);
+            transform: translate(10px, -10px) rotate(2deg);
         }
 
 
@@ -871,29 +898,30 @@ main>.product-flavor{
 
     @keyframes ANfadein {
         0% {
-            opacity: 0;}
+            opacity: 0;
+        }
 
-        20%{
+        20% {
             opacity: .3;
-            transform:  translate(0px,-10px) ;
+            transform: translate(0px, -10px);
         }
 
         70% {
             opacity: 1;
-            transform:  translate(0px,0px) ;
+            transform: translate(0px, 0px);
         }
     }
-    
+
     .index-bg {
         display: none;
     }
-     
-//     header>.row {
-//         position: relative;
-//         background-image: url(/public/images/home-Vector01.png);
-//         background-size: 100%;
-//         padding-bottom: 45%;
-// }
+
+    //     header>.row {
+    //         position: relative;
+    //         background-image: url(/public/images/home-Vector01.png);
+    //         background-size: 100%;
+    //         padding-bottom: 45%;
+    // }
     header>.row {
         position: relative;
         background-image: none;
@@ -980,40 +1008,41 @@ main>.product-flavor{
         width: 50px;
         text-align: center;
         border-radius: 5px;
-        Box-shadow: 0.5px 0.5px 3px 0.3px rgba($primary-color,0.4),
-        1px 1px 3px 1px rgba(white,0.1) inset;
+        Box-shadow: 0.5px 0.5px 3px 0.3px rgba($primary-color, 0.4),
+            1px 1px 3px 1px rgba(white, 0.1) inset;
     }
 
-    #banner{
+    #banner {
         margin-top: 0;
     }
 
     //==============中大裝置分頁HEADER+NAV=====================
     /// 
-    header{
-        background-color: rgba($light-p,0.1);
+    header {
+        background-color: rgba($light-p, 0.1);
     }
 
-    
-    header.inner-page{
+
+    header.inner-page {
         background-color: $pink;
     }
 
-    .headerbg>img{
+    .headerbg>img {
         width: 100%;
         max-width: 1920px;
     }
+
     header.inner-page {
         display: flex;
         flex-wrap: wrap;
         position: relative;
     }
 
-    .header-logo{
+    .header-logo {
         display: block;
         box-sizing: border-box;
         width: 20%;
-        background-color: rgba(white,0.9) ;
+        background-color: rgba(white, 0.9);
         border: 8px double $pink;
         border-radius: 50%;
         padding: 0px 10px;
@@ -1022,7 +1051,9 @@ main>.product-flavor{
         // filter: drop-shadow(0px 0px 10px rgba(white,1));
     }
 
-    nav.nav-inner-page{display: block;}
+    nav.nav-inner-page {
+        display: block;
+    }
 
     header>.container>.header-logo img {
         flex-wrap: wrap;
@@ -1031,7 +1062,9 @@ main>.product-flavor{
         width: 100%;
     }
 
-    .container{position: relative;}
+    .container {
+        position: relative;
+    }
 
     body>header>.container>nav.nav-inner-page>ul {
         display: flex;
@@ -1068,15 +1101,15 @@ main>.product-flavor{
     //=======中~大裝置分頁HEADER end
 
     //=======中~大裝置分頁內容 Start
-    
+
     //麵包屑breadcrumb
 
-    .breadcrumb{
+    .breadcrumb {
         margin-top: 30px;
         font-size: 18px;
     }
 
-    .breadcrumb>a{
+    .breadcrumb>a {
         margin-top: 20px;
         font-size: 18px;
     }
@@ -1086,11 +1119,11 @@ main>.product-flavor{
         width: 20%;
     }
 
-    .about-sm{
+    .about-sm {
         display: none;
     }
 
-    .about-md{
+    .about-md {
         display: block;
         margin: auto;
         width: 100%;
@@ -1099,37 +1132,99 @@ main>.product-flavor{
         padding-bottom: 70px;
     }
 
-    .about-outer{
+    .about-outer {
         display: flex;
         align-items: center;
     }
-    .about-outer>.order-md-1{
+
+    .about-outer>.order-md-1 {
         align-self: flex-end;
     }
+
     .about p {
         font-size: 22px;
         line-height: 32px;
         margin-top: 10px;
     }
 
-    .about h2{
+    .about h2 {
         margin-top: 20px;
         font-size: 26px;
     }
 
+    .deco-1 {
+        background-color: #B0314F;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        position: absolute;
+        top: 0px;
+        right: -150px;
+    }
+
+    .deco-2 {
+        background-color: #ad7e89;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        top: 40px;
+        right: -50px;
+    }
+
+    .deco-3 {
+        background-color: #e62a56;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 0px;
+        right: -60px;
+    }
+
+    .deco-4 {
+        background-color: #e62a56;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 100px;
+        right: 0px;
+    }
+
+    .deco-5 {
+        background-color: #ff91ab;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: 70px;
+        right: -30px;
+    }
+
+    .deco-6 {
+        background-color: #610b1f;
+        border-radius: 50%;
+        height: 75px;
+        width: 75px;
+        position: absolute;
+        bottom: 30px;
+        right: -20px;
+    }
+
     //=======大裝置about end====
     //=======大裝置procuct start======
-    .title-line-innerpage.longer-line{
+    .title-line-innerpage.longer-line {
         width: 30%;
     }
 
-    .product-img{
+    .product-img {
         margin: auto;
         width: 80%;
         padding: 0.8em;
     }
 
-    .product-img>.product-title{
+    .product-img>.product-title {
         font-size: 26px;
         line-height: 55px;
         letter-spacing: 0.1em;
@@ -1137,28 +1232,37 @@ main>.product-flavor{
         padding-bottom: 5px;
         transition: all .5s;
     }
-    
-    .product-img:hover .product-title{
-        bottom:0;
+
+    .product-img:hover .product-title {
+        bottom: 0;
     }
-    .product-text{
+
+    .product-text {
         height: 100px;
         margin-top: 20px;
         padding-bottom: 0px;
         border-bottom: 8px dotted $yellow;
         // border-bottom: none;
-     }
+    }
 
-    main>.product-flavor{
+    main>.product-flavor {
         margin-bottom: 40px;
     }
-    
+
+    //=======大裝置procuct end======
+    //===========中~大裝置最新消息NEWS start =====
+
+    .news-width {
+        width: 28%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
 
     //=======中~大裝置分頁內容 end
 
 
     //========中~大裝置HOME 首頁內容=========
-    .product-side>ul>li>.btn-primary{
+    .product-side>ul>li>.btn-primary {
         line-height: 40px;
         font-size: 21px;
         margin-top: 20px;
@@ -1192,13 +1296,13 @@ main>.product-flavor{
         margin-bottom: 5px;
     }
 
-    
+
     .home-content-inner>p {
         font-size: 20px;
         line-height: 30px;
     }
 
-    .home-round-img img{
+    .home-round-img img {
         box-sizing: border-box;
         padding: 10px;
     }
@@ -1208,7 +1312,7 @@ main>.product-flavor{
         line-height: 40px;
         font-weight: normal;
     }
-    
+
 }
 
 @media(min-width:768px) {
@@ -1217,6 +1321,7 @@ main>.product-flavor{
         text-align: right;
     }
 }
+
 ////////////////////////////////////
 /// ////////////////////////////////
 /// 768以上 end
@@ -1295,8 +1400,8 @@ footer>.container>.row>div>.copyright {
 
 //FOOTER MD LG 
 @media(min-width:768px) {
-  
-    footer > .container > .row > div {
+
+    footer>.container>.row>div {
         align-self: flex-end;
         padding-bottom: 20px;
     }
@@ -1346,6 +1451,7 @@ footer>.container>.row>div>.copyright {
     footer>.container>.row>.footer-md-left>p {
         text-align: left;
     }
+
     footer>.container>.row>.footer-md-right>p {
         text-align: right;
     }
