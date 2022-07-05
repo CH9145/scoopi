@@ -7,6 +7,7 @@ html
         title 關於Scoopi
         link(rel="icon", href="public/images/scoopi-icon-yellow.ico", type="image/x-icon")
         link(rel="shortcut icon", href="public/images/scoopi-icon-yellow.ico", type="image/x-icon")
+        link(rel="stylesheet", href="public/js/WOW-master/css/libs/animate.css")        
         link(rel='stylesheet', href='public/css/styles.css')
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
     body
@@ -43,7 +44,16 @@ html
             .container.row 
                 img.construction.img-fluid(src="public/images/construction.jpg")
             .container.row 
-                .col-6.col-md-4
+                .col-12.col-md-4
+                    .news-outer
+                        .news-inner
+                            img.news-img.img-fluid(src="public/images/news-banner.jpg", alt="")
+                            span.icon-new NEW
+                            .news-date 時間：2022年7月
+                                .click-more.icon-arrow 
+                                    i.fa-solid.fa-caret-down
+                        .news-more
+                            p 最新口味推出囉！即日起限量供應中，歡迎來店品嘗～
                     .news-outer
                         .news-inner
                             img.news-img.img-fluid(src="public/images/news-banner.jpg", alt="")
@@ -53,6 +63,7 @@ html
                                     //- i.fa-solid.fa-caret-down
                         .news-more
                             p 最新口味推出囉！即日起限量供應中，歡迎來店品嘗～
+
         footer 
             .container 
                 .row
@@ -76,4 +87,6 @@ html
                         p.copyright.copyright-sm.footer-order-sm-1 Copyright © 2022 Scoopi
 
         script(src='https://code.jquery.com/jquery-3.6.0.min.js', integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', crossorigin='anonymous')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js")
+        script(src="public/js/WOW-master/dist/wow.min.js")
         script(src="public/js/script.js")

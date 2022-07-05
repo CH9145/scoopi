@@ -7,6 +7,7 @@ html
         title 我的會員
         link(rel="icon", href="public/images/scoopi-icon-yellow.ico", type="image/x-icon")
         link(rel="shortcut icon", href="public/images/scoopi-icon-yellow.ico", type="image/x-icon")
+        link(rel="stylesheet", href="public/js/WOW-master/css/libs/animate.css")
         link(rel='stylesheet', href='public/css/styles.css')
     body
         header.inner-page
@@ -37,6 +38,7 @@ html
         .container
             .row 
                 .col-12.col-md-6-center-login
+                    //- form.form(action="index.html")
                     form.form(action="javascript:;")
                         h2
                             span 我的會員
@@ -45,7 +47,7 @@ html
                             input(type="text" id="account") 
                         .input-group
                             label(for="account") 密碼
-                            input(type="text" id="account") 
+                            input(type="password" id="password") 
                         .input-group 
                             .w-50
                                 input(type="checkbox", name="")
@@ -90,4 +92,6 @@ html
                         p.copyright.copyright-sm.footer-order-sm-1 Copyright © 2022 Scoopi
 
         script(src='https://code.jquery.com/jquery-3.6.0.min.js', integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', crossorigin='anonymous')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js")
+        script(src="public/js/WOW-master/dist/wow.min.js")
         script(src="public/js/script.js")
