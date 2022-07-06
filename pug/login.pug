@@ -44,19 +44,44 @@ html
                             span 我的會員
                         .input-group
                             label(for="account") 帳號
-                            input(type="text" id="account") 
+                            input(type="text" name="account" id="account" placeholder="請輸入帳號或信箱") 
                         .input-group
                             label(for="account") 密碼
-                            input(type="password" id="password") 
+                            input(type="password" name="password" id="password" placeholder="請輸入密碼") 
                         .input-group 
                             .w-50
-                                input(type="checkbox", name="")
+                                input(type="checkbox", name="remember")
                                 |記住帳號
                             .w-50.forget-id
                                 a 忘記帳號或密碼?
                         .input-group.flex-space-between
-                            input.btn-secondary.w-48(type="submit" value="註冊")
-                            input.btn-primary.w-48(type="submit" value="登入")
+                            a#open-modal.btn-secondary.w-48(href='javascript:;' onclick='openModal();') 註冊
+                            .modal-wrapper
+                                .modal-content
+                                    #btn-close-switch.btn-close X
+                                    h2 
+                                        span 加入我們
+                                    label(for="account") 帳號
+                                    input(type="text" name="account" id="account" placeholder="請輸入帳號") 
+                                    label(for="account") 信箱
+                                    input(type="text" name="account" id="account" placeholder="請輸入信箱")
+                                    label(for="account") 密碼
+                                    input(type="password" name="password" id="password" placeholder="請輸入6~12位數密碼") 
+                                    label(for="account") 密碼確認
+                                    input(type="password" name="password" id="password" placeholder="再次輸入密碼") 
+                                    .input-group.signup
+                                        input(type="checkbox", name="check")
+                                        p.checkbox-description 我同意
+                                            span 會員條款
+                                            |與
+                                            span 隱私權規則
+                                    .input-group
+                                        input(type="checkbox", name="check") 
+                                        p.checkbox-description 訂閱電子報             
+                                    .input-group
+                                        a.btn-secondary.w-48(href='index.html') 註冊                                    
+                                    //- 
+                            input.btn-primary.w-48(type="submit" name="" value="登入")
                         .input-group.snslogin
                             p 社群登入
                         .input-group.flex-space-between.login-icons

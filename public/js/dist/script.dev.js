@@ -8,6 +8,28 @@ $('.news-outer').on('click', function () {
   $(this).toggleClass('active');
   $(this).siblings().removeClass('active');
 }); // }) //最新消息摺疊 end
+//註冊蓋板
+
+var modalWrapper = document.getElementsByClassName('modal-wrapper')[0];
+var btnCloseSwitch = document.getElementById('btn-close-switch');
+btnCloseSwitch.addEventListener('click', closeModal);
+modalWrapper.addEventListener('click', closeModal);
+
+function openModal() {
+  console.log('test');
+  modalWrapper.classList.add('active');
+}
+
+function closeModal(e) {
+  // console.log(e.target)
+  // console.log(this)
+  if (e.target == this) {
+    console.log('符合事件的選取器');
+    modalWrapper.classList.remove('active');
+  } else {
+    console.log('不符合');
+  }
+} //註冊蓋板end
 // // 卷軸回到top
 // let offsetTop
 // let product1Top = $('.product-section-1').offset().top
@@ -26,6 +48,7 @@ $('.news-outer').on('click', function () {
 //     $('html',body).animate({scrollTop:0})
 // }) //.page-top end
 //
+
 
 $(window).scroll(function () {
   offsetTop = $(window).scrollTop();
