@@ -43,215 +43,72 @@ html
             //- .container.row 
             //-     img.construction.img-fluid(src="public/images/construction.jpg")
             .container.row
-                .col-12.col-md-4    
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-banner.jpg", alt="")
-                            span.icon-new NEW
-                            .news-title 季節限定新品
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 最新口味推出囉！即日起供應中，歡迎來店品嘗～
-                            p 每日供應量依門市為主，當季商品數量有限，想嘗鮮要快唷！
-                            p.date 2022.06.30
-                .col-12.col-md-4            
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-summer.jpg", alt="")
-                            span.icon-new NEW
-                            .news-title 七月週三分享日
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 七月份限定優惠，每周三全品項冰淇淋第二球半價。趕快邀請好朋友一起來享用吧！
-                            p.date 2022.06.20
                 .col-12.col-md-4
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
-                            .news-title 【製冰體驗】開始報名
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 一起做冰淇淋吧！！
-                            p 2022年7月1日，舉辦義式冰淇淋製作體驗課程～因要提前備料，請在6/25前提交報名表喔。
-                            p 活動詳情請看報名頁面：
-                            a.news-link -報名點此-
-                            p.date 2022.06.10
-                .col-12.col-md-4
-                    .news-outer.news-width
+                    a.open-modal.w-48(href='javascript:;' onclick='openModal();')
+                        .news-outer.news-width
                             .news-inner
-                                img.news-img.img-fluid(src="public/images/news-summer.jpg", alt="")
-                                .news-title 七月週三分享日
+                                img.news-img.img-fluid(src="public/images/news-banner.jpg", alt="")
+                                span.icon-new NEW
+                                .news-title 季節限定新品
                                     .click-more.icon-arrow 
                                         i.fa-solid.fa-caret-down
                             .news-more
+                                p 最新口味推出囉！即日起供應中，歡迎來店品嘗～
+                                p 每日供應量依門市為主，當季商品數量有限，想嘗鮮要快唷！
+                                p.date 2022.06.30
+                    .modal-wrapper
+                        .modal-content
+                            #btn-close-switch.btn-close X
+                            .news-inner
+                                img.news-img.img-fluid(src="public/images/news-banner.jpg", alt="")
+                                .news-md-title 季節限定新品
+                            .news-md-more
+                                p 最新口味推出囉！即日起供應中，歡迎來店品嘗～
+                                p 每日供應量依門市為主，當季商品數量有限，想嘗鮮要快唷！
+                                p.date 2022.06.30
+                .col-12.col-md-4
+                    a.open-modal.w-48(href='javascript:;' onclick='openModal();')
+                        .news-outer.news-width
+                            .news-inner
+                                img.news-img.img-fluid(src="public/images/news-summer.jpg", alt="")
+                                span.icon-new NEW
+                                .news-title 七月週三分享日
+                                    .click-more.icon-arrow 
+                                        i.fa-solid.fa-caret-down
+                    .modal-wrapper
+                        .modal-content
+                            #btn-close-switch.btn-close X
+                            .news-inner
+                                img.news-img.img-fluid(src="public/images/news-summer.jpg", alt="")
+                                .news-title 七月週三分享日
+                            .news-md-more
                                 p 七月份限定優惠，每周三全品項冰淇淋第二球半價。趕快邀請好朋友一起來享用吧！
                                 p.date 2022.06.20
-                .col-12.col-md-4
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
-                            .news-title 【製冰體驗】開始報名
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 一起做冰淇淋吧！！
-                            p 2022年7月1日，舉辦義式冰淇淋製作體驗課程～因要提前備料，請在6/25前提交報名表喔。
-                            p 活動詳情請看報名頁面：
-                            a.news-link -報名點此-
-                            p.date 2022.06.10
-                .col-12.col-md-4           
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-banner.jpg", alt="")
-                            .news-title 季節限定新品
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 最新口味推出囉！即日起供應中，歡迎來店品嘗～
-                            p 每日供應量依門市為主，當季商品數量有限，想嘗鮮要快唷！
-                            p.date 2022.06.30
-                .col-12.col-md-4
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
-                            .news-title 【製冰體驗】開始報名
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 一起做冰淇淋吧！！
-                            p 2022年7月1日，舉辦義式冰淇淋製作體驗課程～因要提前備料，請在6/25前提交報名表喔。
-                            p 活動詳情請看報名頁面：
-                            a.news-link -報名點此-
-                            p.date 2022.06.10
-                .col-12.col-md-4           
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-banner.jpg", alt="")
-                            .news-title 季節限定新品
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 最新口味推出囉！即日起供應中，歡迎來店品嘗～
-                            p 每日供應量依門市為主，當季商品數量有限，想嘗鮮要快唷！
-                            p.date 2022.06.30
-                .col-12.col-md-4
-                    .news-outer.news-width
-                            .news-inner
-                                img.news-img.img-fluid(src="public/images/news-summer.jpg", alt="")
-                                .news-title 七月週三分享日
-                                    .click-more.icon-arrow 
-                                        i.fa-solid.fa-caret-down
-                            .news-more
-                                p 七月份限定優惠，每周三全品項冰淇淋第二球半價。趕快邀請好朋友一起來享用吧！
-                                p.date 2022.06.20
-            .container.row
-                .col-12.col-md-4    
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-banner.jpg", alt="")
-                            span.icon-new NEW
-                            .news-title 季節限定新品
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 最新口味推出囉！即日起供應中，歡迎來店品嘗～
-                            p 每日供應量依門市為主，當季商品數量有限，想嘗鮮要快唷！
-                            p.date 2022.06.30
-                .col-12.col-md-4            
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-summer.jpg", alt="")
-                            span.icon-new NEW
-                            .news-title 七月週三分享日
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 七月份限定優惠，每周三全品項冰淇淋第二球半價。趕快邀請好朋友一起來享用吧！
-                            p.date 2022.06.20
-                .col-12.col-md-4
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
-                            .news-title 【製冰體驗】開始報名
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 一起做冰淇淋吧！！
-                            p 2022年7月1日，舉辦義式冰淇淋製作體驗課程～因要提前備料，請在6/25前提交報名表喔。
-                            p 活動詳情請看報名頁面：
-                            a.news-link -報名點此-
-                            p.date 2022.06.10
-                .col-12.col-md-4
-                    .news-outer.news-width
-                            .news-inner
-                                img.news-img.img-fluid(src="public/images/news-summer.jpg", alt="")
-                                .news-title 七月週三分享日
-                                    .click-more.icon-arrow 
-                                        i.fa-solid.fa-caret-down
-                            .news-more
-                                p 七月份限定優惠，每周三全品項冰淇淋第二球半價。趕快邀請好朋友一起來享用吧！
-                                p.date 2022.06.20
-                .col-12.col-md-4
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
-                            .news-title 【製冰體驗】開始報名
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 一起做冰淇淋吧！！
-                            p 2022年7月1日，舉辦義式冰淇淋製作體驗課程～因要提前備料，請在6/25前提交報名表喔。
-                            p 活動詳情請看報名頁面：
-                            a.news-link -報名點此-
-                            p.date 2022.06.10
-                .col-12.col-md-4           
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-banner.jpg", alt="")
-                            .news-title 季節限定新品
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 最新口味推出囉！即日起供應中，歡迎來店品嘗～
-                            p 每日供應量依門市為主，當季商品數量有限，想嘗鮮要快唷！
-                            p.date 2022.06.30
-                .col-12.col-md-4
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
-                            .news-title 【製冰體驗】開始報名
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 一起做冰淇淋吧！！
-                            p 2022年7月1日，舉辦義式冰淇淋製作體驗課程～因要提前備料，請在6/25前提交報名表喔。
-                            p 活動詳情請看報名頁面：
-                            a.news-link -報名點此-
-                            p.date 2022.06.10
-                .col-12.col-md-4           
-                    .news-outer.news-width
-                        .news-inner
-                            img.news-img.img-fluid(src="public/images/news-banner.jpg", alt="")
-                            .news-title 季節限定新品
-                                .click-more.icon-arrow 
-                                    i.fa-solid.fa-caret-down
-                        .news-more
-                            p 最新口味推出囉！即日起供應中，歡迎來店品嘗～
-                            p 每日供應量依門市為主，當季商品數量有限，想嘗鮮要快唷！
-                            p.date 2022.06.30
-                .col-12.col-md-4
-                    .news-outer.news-width
-                            .news-inner
-                                img.news-img.img-fluid(src="public/images/news-summer.jpg", alt="")
-                                .news-title 七月週三分享日
-                                    .click-more.icon-arrow 
-                                        i.fa-solid.fa-caret-down
-                            .news-more
-                                p 七月份限定優惠，每周三全品項冰淇淋第二球半價。趕快邀請好朋友一起來享用吧！
-                                p.date 2022.06.20                                
+
+                //- .col-12.col-md-4            
+                //-     .news-outer.news-width
+                //-         .news-inner
+                //-             img.news-img.img-fluid(src="public/images/news-summer.jpg", alt="")
+                //-             span.icon-new NEW
+                //-             .news-title 七月週三分享日
+                //-                 .click-more.icon-arrow 
+                //-                     i.fa-solid.fa-caret-down
+                //-         .news-more
+                //-             p 七月份限定優惠，每周三全品項冰淇淋第二球半價。趕快邀請好朋友一起來享用吧！
+                //-             p.date 2022.06.20
+                //- .col-12.col-md-4
+                //-     .news-outer.news-width
+                //-         .news-inner
+                //-             img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
+                //-             .news-title 【製冰體驗】開始報名
+                //-                 .click-more.icon-arrow 
+                //-                     i.fa-solid.fa-caret-down
+                //-         .news-more
+                //-             p 一起做冰淇淋吧！！
+                //-             p 2022年7月1日，舉辦義式冰淇淋製作體驗課程～因要提前備料，請在6/25前提交報名表喔。
+                //-             p 活動詳情請看報名頁面：
+                //-             a.news-link -報名點此-
+                //-             p.date 2022.06.10              
         footer 
             .container 
                 .row
@@ -277,4 +134,25 @@ html
         script(src='https://code.jquery.com/jquery-3.6.0.min.js', integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', crossorigin='anonymous')
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js")
         script(src="public/js/WOW-master/dist/wow.min.js")
-        script(src="public/js/script.js")    
+        script(src="public/js/script.js")
+        script.
+            let modalWrapper = document.getElementsByClassName('modal-wrapper')[0]
+            let btnCloseSwitch = document.getElementById('btn-close-switch')
+            btnCloseSwitch.addEventListener('click',closeModal)
+            modalWrapper.addEventListener('click',closeModal)
+
+            let offsetTop
+            let scrollTop = $('main.news').offset().top
+                $(window).scroll(function(){
+                    offsetTop = $(window).scrollTop()
+                    //- //卷軸高度>=900會出現按鈕
+                    if( offsetTop >= 900){
+                        $('.page-top').addClass('active')
+                    }else{
+                        $('.page-top').removeClass('active')
+                    }
+                })
+            $('.page-Top').on('click',function(){
+                $('html,body').animate({scrollTop:0})
+                console.log('test')
+            })

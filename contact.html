@@ -45,23 +45,21 @@
               <input type="text" id="account">
             </div>
             <div class="input-group">    
-              <input class="radio-first" type="radio" name="purpose">聯絡店家
-              <input type="radio" name="purpose">宅配申請
-              <input type="radio" name="purpose">宅配諮詢
-              <input type="radio" name="purpose">合作洽談
+              <input class="radio-first" type="radio" name="purpose" value="聯絡">聯絡店家
+              <input type="radio" name="purpose" value="宅配">宅配申請
+              <input type="radio" name="purpose" value="宅配詢問">宅配諮詢
+              <input type="radio" name="purpose" value="合作">合作洽談
             </div>
             <div class="input-group input-content">
               <label for="message">內容</label>
               <textarea type="text" name="message" rows="10" cols="50"></textarea>
             </div>
-            <div class="input-group chechbox-radio">
-              <input type="checkbox" name="">
-              <p class="checkbox-description">宅配申請者已閱讀<span>Scoopi宅配說明書</span>，並在內容標明品項與數量</p>
+            <div class="input-group" id="check-order">
+              <input type="checkbox" name=""><span class="checkbox-description">我已閱讀 <span>Scoopi宅配說明書</span>，並在內容標明品項與數量</span>
             </div>
             <div class="input-group flex-space-between">
               <div class="w-50"> 
-                <h3>送出約三個工作天內會有專人聯繫。</h3>
-                <h3>請耐心等候，謝謝！</h3>
+                <h3>送出約三個工作天內會有專人聯繫。請耐心等候，謝謝！</h3>
               </div>
               <input class="btn-primary w-48" type="submit" value="送出">
             </div>
@@ -93,5 +91,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="public/js/WOW-master/dist/wow.min.js"></script>
     <script src="public/js/script.js"></script>
+    <script>
+      $("input[type='radio']").change( function() {
+          if($(this).val() == '宅配'){
+              $('#check-order').show()
+          }else{
+              $('#check-order').hide()
+          }
+      })
+    </script>
   </body>
 </html>

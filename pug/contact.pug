@@ -59,26 +59,25 @@ html
                         //-         option(value="") 合作洽談
                         //-     input(type="text") 
                         .input-group     
-                            input.radio-first(type="radio" name="purpose")
+                            input.radio-first(type="radio" name="purpose" value="聯絡")
                             |聯絡店家
-                            input(type="radio" name="purpose")
+                            input(type="radio" name="purpose" value="宅配")
                             |宅配申請
-                            input(type="radio" name="purpose")
+                            input(type="radio" name="purpose" value="宅配詢問")
                             |宅配諮詢
-                            input(type="radio" name="purpose")
+                            input(type="radio" name="purpose" value="合作")
                             |合作洽談
                         .input-group.input-content
                             label(for="message" ) 內容
                             textarea(type="text" name="message" rows="10" cols="50")
-                        .input-group.chechbox-radio
+                        .input-group#check-order
                             input(type="checkbox", name="")
-                            p.checkbox-description 宅配申請者已閱讀
+                            span.checkbox-description 我已閱讀 
                                 span Scoopi宅配說明書
                                 |，並在內容標明品項與數量
                         .input-group.flex-space-between
                             .w-50 
-                                h3 送出約三個工作天內會有專人聯繫。
-                                h3 請耐心等候，謝謝！
+                                h3 送出約三個工作天內會有專人聯繫。請耐心等候，謝謝！
                             input.btn-primary.w-48(type="submit" value="送出")
         footer 
             .container 
@@ -105,3 +104,11 @@ html
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js")
         script(src="public/js/WOW-master/dist/wow.min.js")
         script(src="public/js/script.js")
+        script.
+            $("input[type='radio']").change( function() {
+                if($(this).val() == '宅配'){
+                    $('#check-order').show()
+                }else{
+                    $('#check-order').hide()
+                }
+            })

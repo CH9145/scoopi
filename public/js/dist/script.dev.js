@@ -9,16 +9,15 @@ $('.news-outer').on('click', function () {
   $(this).siblings().removeClass('active');
 }); // }) //最新消息摺疊 end
 //註冊蓋板
+//LOGIN的
+// function openModal(){
+//     // console.log('test')
+//     modalWrapper.classList.add('active')
+// }
 
-var modalWrapper = document.getElementsByClassName('modal-wrapper')[0];
-var btnCloseSwitch = document.getElementById('btn-close-switch');
-btnCloseSwitch.addEventListener('click', closeModal);
-modalWrapper.addEventListener('click', closeModal);
-
-function openModal() {
-  // console.log('test')
-  modalWrapper.classList.add('active');
-}
+$('.open-modal').on('click', function () {
+  $(this).find('.modal-wrapper').addClass('active');
+});
 
 function closeModal(e) {
   // console.log(e.target)
@@ -35,26 +34,6 @@ function closeModal(e) {
 $(window).on('load', function () {
   $('.loading-overlay').addClass('active');
 }); //window load end
-// // 卷軸回到top
-
-var offsetTop;
-var newsTop = $('main.news').offset().top;
-$(window).scroll(function () {
-  offsetTop = $(window).scrollTop(); //- //卷軸高度>=900會出現按鈕
-
-  if (offsetTop >= 900) {
-    $('.page-top').addClass('active');
-  } else {
-    $('.page-top').removeClass('active');
-  }
-}); //scroll end
-//- //點page-top回到最上方
-
-$('.page-Top').on('click', function () {
-  $('html,body').animate({
-    scrollTop: 0
-  });
-}); //.page-top end
 // 捲軸事件
 // $(window).scroll(function () {
 //     offsetTop = $(window).scrollTop()

@@ -300,12 +300,13 @@ p.checkbox-description {
         margin-bottom: 10px;
     }
 
-    p.checkbox-description>span {
+    .checkbox-description>span {
     color: chocolate;
     cursor: pointer;
 }
 
-p.checkbox-description>span:hover {
+
+.checkbox-description>span:hover {
     border-bottom: 1px solid chocolate;
 }
 
@@ -337,6 +338,8 @@ p.checkbox-description>span:hover {
 .input-group.signup{
     align-items: center;
 }
+
+#check-order{display: none;}
 
 
 // .btn-snslogin{
@@ -750,9 +753,14 @@ main>.product-flavor {
     border-radius: 1px;
     margin-bottom: 20px;
     line-height: 30px;
-    padding: 10px 8px 10px 8px;
+    padding: 10px 10px 0px 10px;
     /* 上右下左 */
     cursor: pointer;
+}
+
+.news-outer .news-img{
+    box-sizing: border-box;
+    padding: 10px 10px 0px 10px;
 }
 
 .news-outer.active .news-more {
@@ -818,6 +826,9 @@ main>.product-flavor {
     padding-left: 10px;
     margin-top: 10px;
     font-weight: bold;
+    text-align: left;
+    letter-spacing: 0px;
+    font-size: 22px;
 }
 
 .news-more>p.date{
@@ -840,6 +851,14 @@ main.news {
     padding-bottom: 200px;
 }
 
+
+main.news .modal-wrapper{
+    display: none;
+}
+
+
+
+
 //網頁裝置中的圖片
 .construction {
     width: 60%;
@@ -847,7 +866,8 @@ main.news {
     margin: auto;
 }
 
-//=======蓋板
+//=====小裝置news end===
+//=======蓋板 start
 
 .modal-wrapper{
     position: fixed;
@@ -887,7 +907,7 @@ main.news {
     z-index: 301;
 }
 
-#open-modal{
+form #open-modal{
 font-size: 18px;
 letter-spacing: 5px;
 text-align: center;
@@ -898,12 +918,13 @@ line-height: 30px;
 opacity: 0.9;
 }
 
+
 .btn-close-switch{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-
-//=======LOADING
+//=======蓋板end
+//=======LOADING start
 
 .loading-overlay{
     position: fixed;
@@ -988,8 +1009,8 @@ opacity: 0.9;
     text-align: center;
     color:white;
     // display: none;
-    right:10px;
-    // right:-60px;
+    // right:10px;
+    right:-60px;
     transform: rotate(0deg);
     transition: all .3s;
 }
@@ -1437,11 +1458,98 @@ opacity: 0.9;
     //=======大裝置procuct end======
     //===========中~大裝置最新消息NEWS start =====
 
+    main.news .modal-wrapper.active{
+        display: block;
+    }
+    .open-modal:hover{
+        opacity: 0.9;
+        }
+
+    main.news a.open-modal>.news-outer>.news-more{
+        display: none;
+    }
+    main.news.active .news-md-more{
+        display: block;
+    }
+
+    .news-title {
+        font-size: 18px;
+    }
+
+    main.news .modal-content{
+        width: 90%;
+        max-width: 500px;
+    }
     .news-width {
         width: 100%;
         margin: auto;
         margin-bottom: 50px;
     }
+
+.news-outer {
+    border: 1px solid $primary-color;
+    border-radius: 1px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    padding: 10px 8px 10px 8px;
+    /* 上右下左 */
+    cursor: pointer;
+}
+
+.news-md-more {
+    padding-top: 10px;
+    color: rgb(81, 81, 81);
+}
+
+.news-md-more>a{
+    cursor: pointer;
+}
+
+.news-inner {
+    position: relative;
+}
+
+.news-md-title {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    border-left: 5px solid $dark-p;
+    padding-left: 5px;
+}
+
+.news-md-more{
+    padding-left: 0;
+    margin-left: 0;
+    font-size: 17px;
+    text-align: left;
+    color: $primary-color;
+    line-height: 25px;
+}
+
+.news-md-more>p.date{
+    font-size: 14px;
+    text-align: right;
+    color: gray;
+    margin-top: 15px;
+}
+
+.news-md-more>a.news-link{
+    font-size: 14px;
+    color: #e62a56;
+    text-decoration: underline;
+}
+
+.news-md-more>a.news-link:hover{
+    color: #ad1035;
+}
+
+main.news {
+    padding-bottom: 200px;
+}
+
+//====中~大裝置 news end
+
+
 
     //=======中~大裝置分頁內容 end
 
@@ -1489,6 +1597,26 @@ opacity: 0.9;
         line-height: 40px;
         font-weight: normal;
     }
+
+    .img-wrap {
+        display: block;
+        position: relative;
+    }
+    
+    .img-overlay {
+        overflow: hidden;
+        border-radius: 8px;
+    }
+    
+    .img-wrap img {
+        vertical-align: top;
+        transition: all .5s;
+    }
+    
+    .img-wrap img:hover {
+        transform: scale(1.5, 1.5);
+    }
+    
 
 }
 

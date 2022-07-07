@@ -2,8 +2,6 @@ $('#btn-nav-switch').on('click', function () {
     $('nav').toggleClass('active')
 })
 
-
-
 // //最新消息頁 摺疊
 $('.news-outer').on('click', function () {
     $(this).toggleClass('active')
@@ -13,15 +11,18 @@ $('.news-outer').on('click', function () {
 
 //註冊蓋板
 
-let modalWrapper = document.getElementsByClassName('modal-wrapper')[0]
-let btnCloseSwitch = document.getElementById('btn-close-switch')
-btnCloseSwitch.addEventListener('click',closeModal)
-modalWrapper.addEventListener('click',closeModal)
 
-function openModal(){
-    // console.log('test')
-    modalWrapper.classList.add('active')
-}
+//LOGIN的
+// function openModal(){
+//     // console.log('test')
+//     modalWrapper.classList.add('active')
+// }
+
+
+$('.open-modal').on('click',function(){
+    $(this).find('.modal-wrapper').addClass('active')
+})
+
 
 function closeModal(e){
     // console.log(e.target)
@@ -32,38 +33,15 @@ function closeModal(e){
     }else{
         // console.log('不符合')
     }
-}
-//註冊蓋板end
-
+} //註冊蓋板end
 
 //loading start
 $(window).on('load',function(){
     $('.loading-overlay').addClass('active')
 }) //window load end
 
-// // 卷軸回到top
-let offsetTop
-let newsTop = $('main.news').offset().top
-    $(window).scroll(function(){
-        offsetTop = $(window).scrollTop()
-        //- //卷軸高度>=900會出現按鈕
-        if( offsetTop >= 900){
-            $('.page-top').addClass('active')
-        }else{
-            $('.page-top').removeClass('active')
-        }
-    }) //scroll end
-
-//- //點page-top回到最上方
-
-$('.page-Top').on('click',function(){
-    $('html,body').animate({scrollTop:0})
-}) //.page-top end
 
 // 捲軸事件
-
-
-
 
 // $(window).scroll(function () {
 //     offsetTop = $(window).scrollTop()
