@@ -234,6 +234,10 @@ p.checkbox-description {
   font-size: 14px;
 }
 
+.modal-content h2 {
+  padding-top: 0;
+}
+
 .modal-content label {
   width: 100%;
   font-size: 16px;
@@ -1096,6 +1100,26 @@ main.news {
     transform: rotate(360deg) translateY(-200%);
   }
 }
+.page-top {
+  position: fixed;
+  bottom: 10px;
+  background-color: #F8D57F;
+  width: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  color: white;
+  right: 10px;
+  transform: rotate(0deg);
+  transition: all 0.3s;
+}
+
+.page-top.active {
+  right: 10px;
+  transform: rotate(360deg);
+}
+
 @media (min-width: 768px) {
   h1.smheader {
     display: none;

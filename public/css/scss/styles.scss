@@ -259,6 +259,10 @@ p.checkbox-description {
     font-size: 14px;
 }
 
+.modal-content h2{
+    padding-top: 0;
+}
+
     .modal-content label{
         width: 100%;
         font-size: 16px;
@@ -970,6 +974,31 @@ opacity: 0.9;
       transform: rotate(360deg) translateY(-200%);
    }
 }
+
+
+//卷軸回top start
+.page-top{
+    position: fixed;
+    bottom:10px;
+    background-color: $light-y;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    color:white;
+    // display: none;
+    right:10px;
+    // right:-60px;
+    transform: rotate(0deg);
+    transition: all .3s;
+}
+.page-top.active{
+    // display: block;
+    right:10px;
+    transform: rotate(360deg);
+}
+
 //===================================
 ////中~大裝置========================
 
