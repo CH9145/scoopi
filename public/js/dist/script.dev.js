@@ -16,7 +16,7 @@ $('.news-outer').on('click', function () {
 // }
 
 $('.open-modal').on('click', function () {
-  $(this).find('.modal-wrapper').addClass('active');
+  $('.modal-wrapper').addClass('active');
 });
 
 function closeModal(e) {
