@@ -4,7 +4,7 @@ html
         meta(charset='UTF-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
-        title 關於Scoopi
+        title 最新消息
         link(rel="icon", href="public/images/scoopi-icon-yellow.ico", type="image/x-icon")
         link(rel="shortcut icon", href="public/images/scoopi-icon-yellow.ico", type="image/x-icon")
         link(rel="stylesheet", href="public/js/WOW-master/css/libs/animate.css")        
@@ -86,13 +86,13 @@ html
                                 .news-md-title 七月週三分享日
                             .news-md-more
                                 p 七月份限定優惠，每周三全品項冰淇淋第二球半價。趕快邀請好朋友一起來享用吧！
-                                p.date 2022.06.20
+                                p.date 2022.06.20                      
                 .col-12.col-md-4
                     a.open-modal.modal-3.w-48(href='javascript:;')
                         .news-outer.news-width
                             .news-inner
                                 img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
-                                .news-title 【製冰體驗】開始報名
+                                .news-title 製冰體驗課報名中
                                     .click-more.icon-arrow 
                                         i.fa-solid.fa-caret-down
                             .news-more
@@ -104,7 +104,7 @@ html
                             .btn-close.btn-close-3 X
                             .news-inner
                                 img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
-                                .news-md-title 【製冰體驗】開始報名
+                                .news-md-title 製冰體驗課報名中
                             .news-md-more
                                 p 2022年7月1日，舉辦義式冰淇淋製作體驗課程～因要提前備料，請在6/25前提交報名表喔。(活動詳情請看報名頁面)
                                 a.news-link ♦ 報名點此
@@ -114,7 +114,7 @@ html
                         .news-outer.news-width
                             .news-inner
                                 img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
-                                .news-title 【製冰體驗】開始報名
+                                .news-title 製冰體驗課報名中
                                     .click-more.icon-arrow 
                                         i.fa-solid.fa-caret-down
                             .news-more
@@ -126,7 +126,7 @@ html
                             .btn-close.btn-close-3 X
                             .news-inner
                                 img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
-                                .news-md-title 【製冰體驗】開始報名
+                                .news-md-title 製冰體驗課報名中
                             .news-md-more
                                 p 2022年7月1日，舉辦義式冰淇淋製作體驗課程～因要提前備料，請在6/25前提交報名表喔。(活動詳情請看報名頁面)
                                 a.news-link ♦ 報名點此
@@ -202,7 +202,7 @@ html
                         .news-outer.news-width
                             .news-inner
                                 img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
-                                .news-title 【製冰體驗】開始報名
+                                .news-title 製冰體驗課報名中
                                     .click-more.icon-arrow 
                                         i.fa-solid.fa-caret-down
                             .news-more
@@ -214,7 +214,7 @@ html
                             .btn-close.btn-close-3 X
                             .news-inner
                                 img.news-img.img-fluid(src="public/images/news-camp.jpg", alt="")
-                                .news-md-title 【製冰體驗】開始報名
+                                .news-md-title 製冰體驗課報名中
                             .news-md-more
                                 p 2022年7月1日，舉辦義式冰淇淋製作體驗課程～因要提前備料，請在6/25前提交報名表喔。(活動詳情請看報名頁面)
                                 a.news-link ♦ 報名點此
@@ -296,19 +296,3 @@ html
                 $('.modal-wrapper').removeClass('active')
             })
 
-
-            let offsetTop
-            let scrollTop = $('main.news').offset().top
-                $(window).scroll(function(){
-                    offsetTop = $(window).scrollTop()
-                    //- //卷軸高度>=900會出現按鈕
-                    if( offsetTop >= 900){
-                        $('.page-top').addClass('active')
-                    }else{
-                        $('.page-top').removeClass('active')
-                    }
-                })
-            $('.page-Top').on('click',function(){
-                $('html,body').animate({scrollTop:0})
-                console.log('test')
-            })

@@ -10,17 +10,6 @@ $('.news-outer').on('click', function () {
 // }) //最新消息摺疊 end
 
 //註冊蓋板
-
-
-            //- let modalWrapper2 = $('.modal-2')
-            //- let btnCloseSwitch2 = $('.btn-close-2')
-
-//LOGIN的
-// function openModal(){
-//     // console.log('test')
-//     modalWrapper.classList.add('active')
-// }
-
 function closeModal(e){
     console.log(e.target)
     // console.log(this)
@@ -32,10 +21,31 @@ function closeModal(e){
     }
 } //註冊蓋板end
 
+
 //loading start
 $(window).on('load',function(){
     $('.loading-overlay').addClass('active')
 }) //window load end
+
+
+//轉軸移動到最上面
+let offsetTop
+let scrollTop = $('main').offset().top
+    $(window).scroll(function(){
+        offsetTop = $(window).scrollTop()
+        //- //卷軸高度>=900會出現按鈕
+        if( offsetTop >= 900){
+            $('.page-top').addClass('active')
+        }else{
+            $('.page-top').removeClass('active')
+        }
+    })
+
+$('.page-top').on('click',function(){
+    $('html,body').animate({scrollTop:0})
+    console.log('test')
+}) //page-top end
+
 
 
 // 捲軸事件
