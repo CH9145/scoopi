@@ -1539,6 +1539,10 @@ form #open-modal {
     display: block;
   }
 
+  a.modal-3 > .news-outer > .news-more {
+    display: none;
+  }
+
   .news-title {
     font-size: 18px;
   }

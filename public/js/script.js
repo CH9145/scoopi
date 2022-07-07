@@ -12,20 +12,17 @@ $('.news-outer').on('click', function () {
 //註冊蓋板
 
 
+            //- let modalWrapper2 = $('.modal-2')
+            //- let btnCloseSwitch2 = $('.btn-close-2')
+
 //LOGIN的
 // function openModal(){
 //     // console.log('test')
 //     modalWrapper.classList.add('active')
 // }
 
-
-$('.open-modal').on('click',function(){
-    $('.modal-wrapper').addClass('active')
-})
-
-
 function closeModal(e){
-    // console.log(e.target)
+    console.log(e.target)
     // console.log(this)
     if(e.target == this){
         // console.log('符合事件的選取器')

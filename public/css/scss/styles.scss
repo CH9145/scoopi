@@ -1468,9 +1468,15 @@ opacity: 0.9;
     main.news a.open-modal>.news-outer>.news-more{
         display: none;
     }
+
     main.news.active .news-md-more{
         display: block;
     }
+
+    a.modal-3>.news-outer>.news-more{
+        display: none;
+    }
+
 
     .news-title {
         font-size: 18px;
