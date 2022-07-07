@@ -1606,22 +1606,22 @@ main.news {
         font-weight: normal;
     }
 
-    .img-wrap {
+    main.index .img-wrap {
         display: block;
         position: relative;
     }
     
-    .img-overlay {
+    main.index .img-overlay {
         overflow: hidden;
         border-radius: 50%;
     }
     
-    .img-wrap img {
+    main.index .img-wrap img {
         vertical-align: top;
         transition: all .5s;
     }
     
-    .img-wrap img:hover {
+    main.index .img-wrap img:hover {
         transform: scale(1.2, 1.2);
     }
     
