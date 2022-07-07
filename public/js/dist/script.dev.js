@@ -30,6 +30,12 @@ function closeModal(e) {
     console.log('不符合');
   }
 } //註冊蓋板end
+//loading start
+
+
+$(window).on('load', function () {
+  $('.loading-overlay').addClass('active');
+}); //window load end
 // // 卷軸回到top
 // let offsetTop
 // let product1Top = $('.product-section-1').offset().top
@@ -48,7 +54,6 @@ function closeModal(e) {
 //     $('html',body).animate({scrollTop:0})
 // }) //.page-top end
 //
-
 
 $(window).scroll(function () {
   offsetTop = $(window).scrollTop();

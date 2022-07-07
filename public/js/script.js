@@ -36,6 +36,11 @@ function closeModal(e){
 //註冊蓋板end
 
 
+//loading start
+$(window).on('load',function(){
+    $('.loading-overlay').addClass('active')
+}) //window load end
+
 // // 卷軸回到top
 // let offsetTop
 // let product1Top = $('.product-section-1').offset().top
