@@ -1051,41 +1051,6 @@ form #open-modal {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-@media (max-width: 767px) {
-  .loading-overlay {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  .loading-overlay {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: #fbde96;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: all 2s;
-    transition-delay: 1s;
-  }
-
-  .loading-overlay.active {
-    top: -100vh;
-  }
-
-  /* loading start */
-  .loading-logo {
-    position: absolute;
-    width: 100%;
-    max-width: 150px;
-    margin: auto;
-    padding: 0;
-    animation-duration: 0.5s;
-  }
-}
 .page-top {
   position: fixed;
   bottom: 10px;
