@@ -25,25 +25,22 @@ function closeModal(e) {
 $(window).on('load', function () {
   $('.loading-overlay').addClass('active');
 }); //window load end
-//轉軸移動到最上面
-
-var offsetTop;
-var scrollTop = $('main').offset().top;
-$(window).scroll(function () {
-  offsetTop = $(window).scrollTop(); //- //卷軸高度>=900會出現按鈕
-
-  if (offsetTop >= 900) {
-    $('.page-top').addClass('active');
-  } else {
-    $('.page-top').removeClass('active');
-  }
-});
-$('.page-top').on('click', function () {
-  $('html,body').animate({
-    scrollTop: 0
-  });
-  console.log('test');
-}); //page-top end
+// //轉軸移動到最上面
+// let offsetTop
+// let scrollTop = $('main').offset().top
+//     $(window).scroll(function(){
+//         offsetTop = $(window).scrollTop()
+//         //- //卷軸高度>=900會出現按鈕
+//         if( offsetTop >= 900){
+//             $('.page-top').addClass('active')
+//         }else{
+//             $('.page-top').removeClass('active')
+//         }
+//     })
+// $('.page-top').on('click',function(){
+//     $('html,body').animate({scrollTop:0})
+//     // console.log('test')
+// }) //page-top end
 // 捲軸事件
 // $(window).scroll(function () {
 //     offsetTop = $(window).scrollTop()

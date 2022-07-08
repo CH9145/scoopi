@@ -176,7 +176,7 @@ h2>span::after {
     border: none;
 }
 
-.input-group .btn-secondary{
+.form-group .btn-secondary{
     letter-spacing: 5px;
     border: none;
 }
@@ -293,11 +293,12 @@ p.checkbox-description {
         margin-bottom: 0;
     }
 
-    .modal-content .input-group a{
+    .modal-content .form-group .btn-secondary{
         justify-content: center;
         align-items: center;
         margin-top: 10px;
         margin-bottom: 10px;
+        width: 100%;
     }
 
     .checkbox-description>span {

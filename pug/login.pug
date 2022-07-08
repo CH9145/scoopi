@@ -9,6 +9,7 @@ html
         link(rel="shortcut icon", href="public/images/scoopi-icon-yellow.ico", type="image/x-icon")
         link(rel="stylesheet", href="public/js/WOW-master/css/libs/animate.css")
         link(rel='stylesheet', href='public/css/styles.css')
+       
     body
         header.inner-page
             h1.smheader 
@@ -39,15 +40,15 @@ html
             .row 
                 .col-12.col-md-6-center-login
                     //- form.form(action="index.html")
-                    form.form(action="javascript:;")
+                    form.form(action="javascript:;" id="login")
                         h2
                             span 我的會員
                         .input-group
                             label(for="account") 帳號
-                            input(type="text" name="account" id="account" placeholder="請輸入帳號或信箱") 
+                            input(type="text" name="account" placeholder="請輸入帳號或信箱" autocomplete="off") 
                         .input-group
                             label(for="account") 密碼
-                            input(type="password" name="password" id="password" placeholder="請輸入密碼") 
+                            input(type="password" name="password" placeholder="請輸入密碼" class="message") 
                         .input-group 
                             .w-50
                                 input(type="checkbox", name="remember")
@@ -56,30 +57,6 @@ html
                                 a 忘記帳號或密碼?
                         .input-group.flex-space-between
                             a#open-modal.btn-secondary.w-48(href='javascript:;' onclick='openModal();') 註冊
-                            .modal-wrapper
-                                .modal-content
-                                    #btn-close-switch.btn-close X
-                                    h2 
-                                        span 加入我們
-                                    label(for="account") 帳號
-                                    input(type="text" name="account" id="account" placeholder="請輸入帳號") 
-                                    label(for="account") 信箱
-                                    input(type="text" name="account" id="account" placeholder="請輸入信箱")
-                                    label(for="account") 密碼
-                                    input(type="password" name="password" id="password" placeholder="請輸入6~12位密碼") 
-                                    label(for="account") 密碼確認
-                                    input(type="password" name="password" id="password" placeholder="再次輸入密碼") 
-                                    .input-group.signup
-                                        input(type="checkbox", name="check")
-                                        p.checkbox-description 我同意
-                                            span 會員條款
-                                            |與
-                                            span 隱私權政策
-                                    .input-group
-                                        input(type="checkbox", name="check") 
-                                        p.checkbox-description 訂閱電子報             
-                                    .input-group
-                                        a.btn-secondary.w-48(href='index.html') 註冊                                    
                                     //- 
                             input.btn-primary.w-48(type="submit" name="" value="登入")
                         .input-group.snslogin
@@ -93,7 +70,36 @@ html
                                     img.login-brand(src="public/images/login-facebook.svg")
                             a(href="#")
                                 .btn-snslogin.w-30
-                                    img.login-brand(src="public/images/login-line.png")                        
+                                    img.login-brand(src="public/images/login-line.png")
+                    .modal-wrapper
+                        .modal-content
+                            #btn-close-switch.btn-close X
+                            h2 
+                                span 加入我們
+                            form(action="javascript:;" id="main")
+                                .form-group 
+                                    label(for="account") 帳號
+                                    input(type="text" name="account" placeholder="請輸入帳號" class="message" autocomplete="off") 
+                                .form-group
+                                    label(for="email") 信箱
+                                    input(type="text" name="email" placeholder="請輸入信箱" class="message")
+                                .form-group
+                                    label(for="password") 密碼
+                                    input(type="password" name="password" placeholder="請輸入6~12位密碼" class="message")
+                                .form-group
+                                    label(for="confirm-password") 密碼確認
+                                    input(type="password" name="confirm-password" placeholder="再次輸入密碼" class="message")
+                                .input-group.signup
+                                    input(type="checkbox", name="check")
+                                    p.checkbox-description 我同意
+                                        span 會員條款
+                                        |與
+                                        span 隱私權政策
+                                .input-group
+                                    input(type="checkbox", name="check") 
+                                    p.checkbox-description 訂閱電子報
+                                .form-group
+                                    input.btn-secondary(type="submit" name="" value="註冊")                  
         footer 
             .container 
                 .row
@@ -116,17 +122,140 @@ html
                         p.footer-phone-add-sm 台中市南區興大路145號
                         p.copyright.copyright-sm.footer-order-sm-1 Copyright © 2022 Scoopi
 
+        script(src="public/js/validate/underscore-min.js")
+        script(src="public/js/validate/moment.min.js")
+        script(src="public/js/validate/validate.js") 
         script(src='https://code.jquery.com/jquery-3.6.0.min.js', integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', crossorigin='anonymous')
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js")
         script(src="public/js/WOW-master/dist/wow.min.js")
         script(src="public/js/script.js")
-        script.
+        script. 
+            (function() {
+                validate.extend(validate.validators.datetime, {
+                    parse: function(value, options) {
+                    return +moment.utc(value);
+                    },
+                    format: function(value, options) {
+                    var format = options.dateOnly ? "YYYY-MM-DD" : "YYYY-MM-DD hh:mm:ss";
+                    return moment.utc(value).format(format);
+                    }
+                });
+                var constraints = {
+                    account: {
+                    presence: {message: '為必填項目'},
+                    email: {message: '為電子郵件的格式'}
+                    },
+                    password: {
+                    presence: {message: '為必填項目'},
+                    length: {
+                        minimum: 6,
+                        message: '最少六個字元'
+                    }
+                    },
+                    "confirm-password": {
+                    presence: {message: '為必填項目'},
+                    equality: {
+                        attribute: "password",
+                        message: "密碼不一致"
+                    }
+                    },
+                
+                
+                };
+                // Hook up the form so we can prevent it from being posted
+                var form = document.querySelector("form#main");
+                form.addEventListener("submit", function(ev) {
+                    ev.preventDefault();
+                    handleFormSubmit(form);
+                });
+                // Hook up the inputs to validate on the fly
+                var inputs = document.querySelectorAll("input, textarea, select")
+                for (var i = 0; i < inputs.length; ++i) {
+                    inputs.item(i).addEventListener("change", function(ev) {
+                    var errors = validate(form, constraints) || {};
+                    showErrorsForInput(this, errors[this.name])
+                    });
+                }
+                function handleFormSubmit(form, input) {
+                    // validate the form against the constraints
+                    var errors = validate(form, constraints);
+                    // then we update the form to reflect the results
+                    showErrors(form, errors || {});
+                    if (!errors) {
+                    showSuccess();
+                    }
+                }
+                // Updates the inputs with the validation errors
+                function showErrors(form, errors) {
+                    // We loop through all the inputs and show the errors for that input
+                    _.each(form.querySelectorAll("input[name], select[name]"), function(input) {
+                    // Since the errors can be null if no errors were found we need to handle
+                    // that
+                    showErrorsForInput(input, errors && errors[input.name]);
+                    });
+                }
+                // Shows the errors for a specific input
+                function showErrorsForInput(input, errors) {
+                    // This is the root of the input
+                    var formGroup = closestParent(input.parentNode, "form-group")
+                    // Find where the error messages will be insert into
+                    , messages = formGroup.querySelector(".messages");
+                    // First we remove any old messages and resets the classes
+                    resetFormGroup(formGroup);
+                    // If we have errors
+                    if (errors) {
+                    // we first mark the group has having errors
+                    formGroup.classList.add("has-error");
+                    // then we append all the errors
+                    _.each(errors, function(error) {
+                        addError(messages, error);
+                    });
+                    } else {
+                    // otherwise we simply mark it as success
+                    formGroup.classList.add("has-success");
+                    }
+                }
+                // Recusively finds the closest parent that has the specified class
+                function closestParent(child, className) {
+                    if (!child || child == document) {
+                    return null;
+                    }
+                    if (child.classList.contains(className)) {
+                    return child;
+                    } else {
+                    return closestParent(child.parentNode, className);
+                    }
+                }
+                function resetFormGroup(formGroup) {
+                    // Remove the success and error classes
+                    formGroup.classList.remove("has-error");
+                    formGroup.classList.remove("has-success");
+                    // and remove any old messages
+                    _.each(formGroup.querySelectorAll(".help-block.error"), function(el) {
+                    el.parentNode.removeChild(el);
+                    });
+                }
+                // Adds the specified error with the following markup
+                // <p class="help-block error">[message]</p>
+                function addError(messages, error) {
+                    var block = document.createElement("p");
+                    block.classList.add("help-block");
+                    block.classList.add("error");
+                    block.innerText = error;
+                    messages.appendChild(block);
+                }
+                function showSuccess() {
+                    // We made it \:D/
+                    alert("Success!");
+                }
+                })();
+
             let modalWrapper = document.getElementsByClassName('modal-wrapper')[0]
             let btnCloseSwitch = document.getElementById('btn-close-switch')
             btnCloseSwitch.addEventListener('click',closeModal)
             modalWrapper.addEventListener('click',closeModal)
             //LOGIN的
             function openModal(){
-            console.log('test')
+            //- console.log('test')
             modalWrapper.classList.add('active')
             }
